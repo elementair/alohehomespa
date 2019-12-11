@@ -1,0 +1,93 @@
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+ /* Small devices (landscape phones, 576px and up) */
+
+
+.txt_verde{
+    color: #a8d162;
+}
+.txt_azul{
+    color: #3bc3f2;
+
+}
+.txt_aloe{
+    color: #a8d162;
+    font-family: "beyond_the_mountains";
+}
+.section-paquetes{
+    position: relative;
+    width: 100%; 
+    margin-top: -100px;
+}
+.section-paquetes img{
+    width: 100%;
+}
+.section-categorias{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+  
+}
+.img-categoria img{
+    width: 100%;
+    padding: 0px 5px;
+    text-align: center;
+
+}
+.img-categoria p{
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+}
+.nosotros{
+  
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+}
+.seccion_nosotros{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.imgnosotroslogo img{
+    
+   width: 50%;
+    
+    
+}
+.seccion_nosotros .imgnosotros{
+    /* position: absolute; */
+    
+    right: 0;
+    float: right;
+}
+
+
+ 
+@media (min-width: 576px) {
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+}

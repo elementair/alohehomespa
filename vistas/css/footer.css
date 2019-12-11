@@ -1,0 +1,40 @@
+footer{
+    widows: 100%;
+    margin: 0px;
+    background-color: #444444;
+    color: #fff;
+}
+.imagen_footer img{
+    width: 50%;
+
+}
+.datos_contacto{
+    float: left;
+}
+.sucursales img{
+    width: 22px;
+}
+.sucursales p{
+    font-size: 13px;
+    font-family: 'nexalight';
+}
+.footer2{
+    display: inline-block;
+    background-color: #3cc2f2;
+    width: 100%;
+    padding: 10px;
+}
+.footer2 .raw{
+    margin: 0px !important      ;
+}
+.copyrigth img{
+    width: 150px;
+    float:right;
+}
+
+.redes_sociales img{
+   
+    float:left;
+    width: 30px;
+
+}

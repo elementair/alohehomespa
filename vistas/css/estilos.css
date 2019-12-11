@@ -1,0 +1,100 @@
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/*________________________________________
+|
+|	 ESTILOS GENERALES          
+|________________________________________*/
+
+@font-face{
+    font-family: 'nexalight';
+    src: url('vistas/font/nexalight.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'nexabold';
+    src: url('vistas/font/nexabold.ttf') format("truetype");
+}
+
+@font-face{
+    font-family: 'beyondthemountains';
+    src: url('vistas/font/beyondthemountains.ttf') format("truetype");
+}
+
+/*________________________________________
+|
+|	DEFAULT
+|________________________________________*/
+
+.section_init{
+    width: 100%;
+    display: inline-block;
+    height: 100vh;
+    position: relative;
+    background-color: azure;
+}       
+.section_init p{
+    text-align: center;
+    line-height: 100vh;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+p{
+    font-family: 'nexalight';
+}
+section{
+    width: 100%;
+    position: relative;
+}
+.btn-green{
+    background-color: #cbe3a1;
+    padding: 5px;
+    border-radius: 10px;
+}
+.subtitulo{
+    font-size: 40px;
+    display: inline-block;
+    text-align: center;
+}
+.line{
+    margin-top: 30px;
+    width: 100px;
+    position: relative;
+}
+
+/*________________________________________
+|
+|	fin default
+|________________________________________*/
+
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
