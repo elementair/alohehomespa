@@ -4,50 +4,93 @@ No media query for `xs` since this is the default in Bootstrap */
 
  /* Small devices (landscape phones, 576px and up) */
 
+ .texto-banner{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    top: 40%;
+ }
+    
+ .texto-banner p{
+    font-size: 70px;
+    color: #a8d162;
+    font-family: 'nexabold';
+
+}
+
+.texto-banner span{
+    color: #ccc;
+    font-size: 1.5em;
+    font-family: 'beyondthemountains';
+    margin-top: -40px !important;
+    position: relative;
+    display: block;
+}
 
 .txt_verde{
     color: #a8d162;
+    font-family: 'nexabold';
 }
+
 .txt_azul{
     color: #3bc3f2;
-
+    font-family: 'nexabold';
 }
+
 .txt_aloe{
     color: #a8d162;
-    font-family: "beyond_the_mountains";
+    font-family: 'beyondthemountains';
 }
+
+.txt_italica{
+    font-size: 25px;
+}
+
+.txt_sin_espacio{
+    margin-bottom: -20px;
+    position: relative;
+    display: block;
+}
+
 .section-paquetes{
     position: relative;
     width: 100%; 
     margin-top: -100px;
 }
+
 .section-paquetes img{
     width: 100%;
 }
+
 .section-categorias{
-    display: inline-block;
     position: relative;
     text-align: center;
-  
 }
+
 .img-categoria img{
     width: 100%;
-    padding: 0px 5px;
     text-align: center;
-
 }
+
 .img-categoria p{
     text-align: center;
     font-size: 20px;
     color: #000;
 }
+
 .nosotros{
-  
     display: inline-block;
     position: relative;
-    width: 100%;
-
+    width: 100%;    
 }
+
+.subtitulo{
+    font-size: 40px;
+    display: inline-block;
+    text-align: center;
+}
+
 .seccion_nosotros{
     display: inline-block;
     position: relative;
@@ -57,23 +100,40 @@ No media query for `xs` since this is the default in Bootstrap */
     background-size: cover;
 
 }
+
 .imgnosotroslogo img{
-    
-   width: 50%;
-    
-    
+   width: 60%;  
+   padding: 20px;
+
 }
+
 .seccion_nosotros .imgnosotros{
-    /* position: absolute; */
-    
+    width: 30%;
     right: 0;
     float: right;
 }
 
+#oferta_laboral{
+    background-color: #f8f8f8;
+}
 
+.seccion_img img{
+    width: 100%;
+    display: inline;
+    position: relative;
+}
+#oferta_laboral .seccion_txt{
+    float: left;
+}
+.btn_laboral{
+    float: right;
+}
+.seccion_txt .subtitulo{
+    text-align: left !important;
+
+}
  
 @media (min-width: 576px) {
-
 
 }
 

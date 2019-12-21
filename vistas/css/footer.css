@@ -27,6 +27,9 @@ footer{
 .footer2 .raw{
     margin: 0px !important      ;
 }
+.copyrigth{
+    font-size: 8px;
+}
 .copyrigth img{
     width: 150px;
     float:right;

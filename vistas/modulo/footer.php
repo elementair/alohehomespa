@@ -49,19 +49,22 @@
     </div>
   </div>
   <div class="footer2">
+    <div class="container">
     <div class="row"> 
       <div class="col-sm redes_sociales">
+        <br>
         <img src="vistas/img/iconos/fb.png" alt=""> 
         <img src="vistas/img/iconos/tw.png" alt="">
         <img src="vistas/img/iconos/yt.png" alt="">
         <img src="vistas/img/iconos/gl.png" alt="">
       </div>
       <div class="col-sm copyrigth">
-        <p>© Copyright AloheHomeSpa 2020, Todos los derechos reservados.</p>
+        <p>© Copyright AloheHomeSpa 2020<br> Todos los derechos reservados.</p>
       </div>
       <div class="col-sm copyrigth">
         <p><img src="vistas/img/iconos/cm2.png" alt=""></p>
       </div>
+    </div>
     </div>
   </div>
 </footer>

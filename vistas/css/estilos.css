@@ -13,14 +13,18 @@ No media query for `xs` since this is the default in Bootstrap */
 
 @font-face {
     font-family: 'nexabold';
-    src: url('vistas/font/nexabold.ttf') format("truetype");
+    src: url(../font/nexabold.ttf) format("truetype");
 }
 
-@font-face{
-    font-family: 'beyondthemountains';
-    src: url('vistas/font/beyondthemountains.ttf') format("truetype");
-}
 
+@font-face {
+    font-family: "beyondthemountains";
+    src: url(../font/beyondthemountains.ttf) format("truetype");
+}
+@font-face {
+    font-family: "nexalight";
+    src: url(../font/nexa_light.ttf) format("truetype");
+}
 /*________________________________________
 |
 |	DEFAULT
@@ -49,17 +53,13 @@ section{
     position: relative;
 }
 .btn-green{
-    background-color: #cbe3a1;
+    background-color: #a8d162;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 10px;    
 }
-.subtitulo{
-    font-size: 40px;
-    display: inline-block;
-    text-align: center;
-}
+
 .line{
-    margin-top: 30px;
+    margin-top: 50px;
     width: 100px;
     position: relative;
 }

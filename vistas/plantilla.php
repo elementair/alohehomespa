@@ -20,8 +20,11 @@
     <link rel="icon"  href="vistas/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="vistas/css/estilos.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="vistas/css/flexisel.css">
+
     <!-- 
         mdb
      -->
@@ -29,10 +32,11 @@
 
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/mdb.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/bootstrap.min.css">
-     <link rel="stylesheet" type="text/css" href="vistas/mdb/css/">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/mdb.lite.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/addons/datatables-select.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/modules/animations-extended.min.css">
+
+
           
 </head>
 <body id="top">
@@ -87,7 +91,7 @@ if(isset($_GET["pagina"])){
 }else{
     ?>
      <link rel="stylesheet" type="text/css" href="vistas/css/inicio.css">
-    <link rel="stylesheet" type="text/css" href="vistas/css/footer.css">
+     <link rel="stylesheet" type="text/css" href="vistas/css/footer.css">
     <?php
     include_once $base."plantilla/inicio.php";
     include_once $base."modulo/footer.php";
@@ -95,23 +99,23 @@ if(isset($_GET["pagina"])){
 ?>
 <a href="#top" class="to-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
 
+
+
+
+
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="vistas/js/parallax.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 <!-- 
     mdb
  -->
- <script src="vistas/mdb/js/mdb.min.js"></script>
- <script src="vistas/mdb/js/bootstrap.min.js"></script>
- <script src="vistas/mdb/js/popper.min.js"></script>
- <script src="vistas/mdb/js/jquery.min.js"></script>
+<script src="vistas/mdb/js/mdb.min.js"></script>
+<script src="vistas/mdb/js/bootstrap.min.js"></script>
+<script src="vistas/mdb/js/popper.min.js"></script>
+<script src="vistas/mdb/js/jquery.min.js"></script>
 
-<!-- 
-    flexisel
- -->
-<script src="vistas/js/jquery.flexisel.min.js"></script>
-<script src="vistas/js/flexisel.js"></script>
 <script src="vistas/js/jquery-modal-video.min.js"></script>
 <script>
     $(".js-video-button").modalVideo({
@@ -137,24 +141,16 @@ if(isset($_GET["pagina"])){
 <script src="vistas/js/menu.js"></script>
 <script src="vistas/js/menu_inicio.js"></script>
 
+<!-- 
+    flexisel
+ -->
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="vistas/js/jquery.flexisel.js"></script>
+<script src="vistas/js/flexisel.js"></script>
 
-
-<!-- <script src="vistas/js/wow.min.js"></script> -->
 <script>
     AOS.init(); 
 </script>
-<!-- jivochat -->
-<!-- BEGIN JIVOSITE CODE {literal} -->
-<!-- <script type='text/javascript'>
 
-
-if(screen.width >= 799){
-    (function(){ var widget_id = 'SlZTURye3M';var d=document;var w=window;function l(){
-    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-}
-else{
-}
-</script> -->
-<!-- {/literal} END JIVOSITE CODE -->
 </body>
 </html>
