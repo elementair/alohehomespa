@@ -28,6 +28,20 @@ No media query for `xs` since this is the default in Bootstrap */
     display: block;
 }
 
+.inicio_carousel a span{
+    background:#b4b3b3;
+    color:#fff;
+    }
+.carousel .carousel-control-prev-icon, .carousel .carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+
 .txt_verde{
     color: #a8d162;
     font-family: 'nexabold';
@@ -104,11 +118,10 @@ No media query for `xs` since this is the default in Bootstrap */
 .imgnosotroslogo img{
    width: 60%;  
    padding: 20px;
-
 }
 
 .seccion_nosotros .imgnosotros{
-    width: 30%;
+    width: 35%;
     right: 0;
     float: right;
 }
@@ -118,9 +131,9 @@ No media query for `xs` since this is the default in Bootstrap */
 }
 
 .seccion_img img{
-    width: 100%;
     display: inline;
     position: relative;
+    width: 100%;
 }
 #oferta_laboral .seccion_txt{
     float: left;

@@ -23,12 +23,16 @@ footer{
     background-color: #3cc2f2;
     width: 100%;
     padding: 10px;
+    line-height: 20px;
 }
 .footer2 .raw{
     margin: 0px !important      ;
 }
-.copyrigth{
-    font-size: 8px;
+
+.redes_sociales p{
+    font-size: 12px;
+    text-align: center;
+
 }
 .copyrigth img{
     width: 150px;

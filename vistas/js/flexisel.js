@@ -55,7 +55,14 @@ $(window).load(function() {
     });
     
     $("#flexiselDemo4").flexisel({
-        infinite: false     
+        infinite: true,
+        visibleItems: 5,
+        itemsToScroll: 1,         
+        autoPlay: {
+            enable: true,
+            interval: 5000,
+            pauseOnHover: true
+        }             
     });    
 });
     

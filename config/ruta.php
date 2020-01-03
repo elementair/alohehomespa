@@ -15,7 +15,7 @@
     } else {
 
         // HTTP
-        $ruta_universal = "http://localhost/shifra/";
+        $ruta_universal = "http://localhost/alohehomespa/";
         // BD Local
         $bd_name='creactiv_shifra';
         $bd_user='root';

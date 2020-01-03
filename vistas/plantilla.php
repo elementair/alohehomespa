@@ -29,18 +29,15 @@
         mdb
      -->
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/mdb.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/bootstrap.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/mdb.lite.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/addons/datatables-select.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/modules/animations-extended.min.css">
-
-
-          
+           
 </head>
 <body id="top">
-<header>
+<header>    
     <?php include ("vistas/modulo/menu.php"); ?>
 </header>
 <?php
@@ -55,35 +52,32 @@ if(isset($_GET["pagina"])){
             <link rel="stylesheet" type="text/css" href="vistas/css/servicios.css">
         <?php
         include_once $base."plantilla/servicios.php";
-        include_once $base."modulo/footer.php";
     }
     elseif ($rutas[0] == "sucursales") {
         ?>
             <link rel="stylesheet" type="text/css" href="vistas/css/sucursales.css">
         <?php
         include_once $base."plantilla/sucursales.php";
-        include_once $base."modulo/footer.php";
     }
     elseif ($rutas[0] == "productos") {
         ?>
              <link rel="stylesheet" type="text/css" href="vistas/css/productos.css">
         <?php
         include_once $base."plantilla/productos.php";
-        include_once $base."modulo/footer.php";
     }
      elseif ($rutas[0] == "inversionistas") {
         ?>
              <link rel="stylesheet" type="text/css" href="vistas/css/inversionistas.css">
         <?php
         include_once $base."plantilla/inversionistas.php";
-        include_once $base."modulo/footer.php";
+        
     }
     elseif ($rutas[0] == "citas") {
         ?>
              <link rel="stylesheet" type="text/css" href="vistas/css/citas.css">
         <?php
         include_once $base."plantilla/citas.php";
-        include_once $base."modulo/footer.php";
+        
     }
     else{
        include_once $base."plantilla/error.php";
@@ -94,14 +88,12 @@ if(isset($_GET["pagina"])){
      <link rel="stylesheet" type="text/css" href="vistas/css/footer.css">
     <?php
     include_once $base."plantilla/inicio.php";
-    include_once $base."modulo/footer.php";
+    
 }
+include_once $base."modulo/footer.php";
+
 ?>
 <a href="#top" class="to-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
-
-
-
-
 
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -144,10 +136,9 @@ if(isset($_GET["pagina"])){
 <!-- 
     flexisel
  -->
- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="vistas/js/jquery.flexisel.js"></script>
 <script src="vistas/js/flexisel.js"></script>
-
 <script>
     AOS.init(); 
 </script>

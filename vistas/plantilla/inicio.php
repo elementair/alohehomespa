@@ -4,35 +4,30 @@
 ---------------------------------->
 <section class="inicio_carousel">
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselInicio" class="carousel slide" data-ride="carousel">
 
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
+
         <div class="carousel-inner">
             <div class="carousel-item active">
             <img class="d-block w-100" src="vistas/img/inicio/banner-home.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-            <img class="d-block w-100" src="vistas/img/inicio/banner-home.jpg" alt="Second slide">
+            <img class="d-block w-100" src="vistas/img/inicio/banner-home2.jpg" alt="Second slide">
             </div>
-            <div class="carousel-item">
-            <img class="d-block w-100" src="vistas/img/inicio/banner-home.jpg" alt="Third slide">
-            </div>
+        </div>
 
-        
-        
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#carouselInicio" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselInicio" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+
+        
+       
         <div class="texto-banner">
             <div class="container">
 
@@ -45,6 +40,7 @@
                 
             </div>
         </div>
+    </div>
 
 </section>
 
@@ -180,7 +176,7 @@
                 <span class="txt_verde">Agenda tu cita</span> 
             </div>
 
-        <div class="card">
+      
 
 
             <!--Card content-->
@@ -188,7 +184,7 @@
 
                 <!-- Form -->
                 <form class="text-center" style="color: #757575;" action="#!">
-
+                <div class="col-sm w-50">
                     <!-- Name -->
                     <div class="md-form mt-3">
                         <input type="text" id="materialContactFormName" class="form-control">
@@ -206,14 +202,27 @@
                         <label for="materialContactFormEmail">E-mail</label>
                     </div>
 
+                     <!-- Celphone -->
+                     <div class="md-form mt-3">
+                        <input type="text" id="materialContactFormNumber" class="form-control">
+                        <label for="materialContactFormName">Teléfono</label>
+                    </div>
+                </div>
                     <!-- Subject -->
-                    <span>Subject</span>
+                    <span>Elige un servicio</span>
                     <select class="browser-default custom-select" >
-                        <option value="" disabled >Choose option</option>
-                        <option value="1" selected >Feedback</option>
-                        <option value="2">Report a bug</option>
-                        <option value="3">Feature request</option>
-                        <option value="4">Feature request</option>
+
+                        <option value="" disabled >-Elige una opcion-</option>
+                        <option value="1" selected >Depilacion definitiva</option>
+                        <option value="2">Faciales</option>
+                        <option value="3">Masajes Corporales</option>
+                        <option value="4">AquaSpa</option>
+                        <option value="5">Manicure</option>
+                        <option value="6">Pedicure</option>
+                        <option value="7">Aparatología Facial</option>
+                        <option value="8">Coberturas</option>
+                        <option value="9">Aparatología</option>
+
                     </select>
 
                     <!--Message-->
@@ -230,13 +239,13 @@
 
 
                     <!-- Send button -->
-                    <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Send</button>
+                    <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">CONTINUAR</button>
 
                 </form>
                 <!-- Form -->
             </div>
 
-        </div>
+        
     <!-- Material form contact -->    
     </div>
 </section>
