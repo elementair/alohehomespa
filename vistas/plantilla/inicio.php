@@ -9,11 +9,11 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img class="d-block w-100" src="vistas/img/inicio/banner-home.jpg" alt="First slide">
+                <img class="d-block w-100" src="vistas/img/inicio/banner-home.jpg" alt="First slide">
             </div>
-            <div class="carousel-item">
-            <img class="d-block w-100" src="vistas/img/inicio/banner-home2.jpg" alt="Second slide">
-            </div>
+            <!-- <div class="carousel-item">
+                <img class="d-block w-100" src="vistas/img/inicio/banner-home2.jpg" alt="Second slide">
+            </div> -->
         </div>
 
         <!-- Left and right controls -->
@@ -180,34 +180,12 @@
 
 
             <!--Card content-->
-            <div class="card-body px-lg-5 pt-0">
+
 
                 <!-- Form -->
                 <form class="text-center" style="color: #757575;" action="#!">
+             
                 <div class="col-sm w-50">
-                    <!-- Name -->
-                    <div class="md-form mt-3">
-                        <input type="text" id="materialContactFormName" class="form-control">
-                        <label for="materialContactFormName">Name</label>
-                    </div>
-                    <!-- Name -->
-                    <div class="md-form mt-3">
-                        <input type="text" id="materialContactFormName" class="form-control">
-                        <label for="materialContactFormName">Apellido</label>
-                    </div>
-
-                    <!-- E-mail -->
-                    <div class="md-form">
-                        <input type="email" id="materialContactFormEmail" class="form-control">
-                        <label for="materialContactFormEmail">E-mail</label>
-                    </div>
-
-                     <!-- Celphone -->
-                     <div class="md-form mt-3">
-                        <input type="text" id="materialContactFormNumber" class="form-control">
-                        <label for="materialContactFormName">Teléfono</label>
-                    </div>
-                </div>
                     <!-- Subject -->
                     <span>Elige un servicio</span>
                     <select class="browser-default custom-select" >
@@ -234,16 +212,40 @@
                     <!-- Copy -->
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                        <label class="form-check-label" for="materialUnchecked">Send me a copy of this message</label>
+                        <label class="form-check-label" for="materialUnchecked">Terminos y condiciones</label>
                     </div>
 
 
                     <!-- Send button -->
                     <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">CONTINUAR</button>
+                </div>
+                <div class="col-sm w-50">
+                    <!-- Name -->
+                    <div class="md-form mt-3">
+                        <input type="text" id="materialContactFormName" class="form-control">
+                        <label for="materialContactFormName">Name</label>
+                    </div>
+                    <!-- Name -->
+                    <div class="md-form mt-3">
+                        <input type="text" id="materialContactFormName" class="form-control">
+                        <label for="materialContactFormName">Apellido</label>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="md-form">
+                        <input type="email" id="materialContactFormEmail" class="form-control">
+                        <label for="materialContactFormEmail">E-mail</label>
+                    </div>
+
+                     <!-- Celphone -->
+                     <div class="md-form mt-3">
+                        <input type="text" id="materialContactFormNumber" class="form-control">
+                        <label for="materialContactFormName">Teléfono</label>
+                    </div>
+                </div>
 
                 </form>
                 <!-- Form -->
-            </div>
 
         
     <!-- Material form contact -->    
@@ -260,7 +262,7 @@
     <div class="container">
 
         <div class="row subtitulo">
-            <span class="txt_verde">Conoce</span> 
+            <span class="txt_verde"> Conoce</span> 
             <span class="txt_azul"> Nuestras Sucursales</span> 
         </div>
 
@@ -291,10 +293,12 @@
 <section id="oferta_laboral">
 
     <div class="container">
-        
+
         <div class="row">
 
+   
             <div class="col-sm w-50 seccion_txt">
+                     <div class="line"></div>
 
                 <div class="subtitulo">
                     <span class="txt_azul txt_sin_espacio">Forma parte del equipo de</span> 
@@ -303,12 +307,12 @@
                 </div>
 
                 <p>
+
                 Aloe Home Spa fue creada en 2016 pensando en el bienestar 
                 de las personas y en cómo poder ayudarles a eliminar 
                 sus altos niveles de estrés por la vida tan ocupada en su trabajo, 
                 oficinas, familia, hogar y problemas de la vida diaria que constantemente 
                 afectan nuestra salud física, mental, estética y emocional. 
-
 
                 </p>
 
@@ -317,8 +321,9 @@
             </div>
 
             <div class="col-sm w-50 seccion_img">
+                        
 
-                <img src="vistas/img/laboral/img.jpg" alt="">
+                <img src="vistas/img/laboral/laboral.png" alt="">
 
             </div>
         

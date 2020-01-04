@@ -23,6 +23,7 @@
     
     <link rel="stylesheet" type="text/css" href="vistas/css/estilos.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="vistas/css/footer.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/flexisel.css">
 
     <!-- 
@@ -85,7 +86,7 @@ if(isset($_GET["pagina"])){
 }else{
     ?>
      <link rel="stylesheet" type="text/css" href="vistas/css/inicio.css">
-     <link rel="stylesheet" type="text/css" href="vistas/css/footer.css">
+     
     <?php
     include_once $base."plantilla/inicio.php";
     

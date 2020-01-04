@@ -5,8 +5,9 @@
         <img src="vistas/img/logo/blanco.png" alt="">
         </div>
         <div class="col-sm datos_contacto">
-        hola@aloehomespa.com.mx
-(33) 3834 8880
+        <p>hola@aloehomespa.com.mx<br>
+        <span><img src="vistas/img/iconos/icono_wats.svg" width="18px"  style="margin-right:5px;" alt="">(33) 3834 8880</span>
+
         </div>
   </div>
     <div class="row sucursales">
@@ -47,6 +48,8 @@
           </p>
         </div>  
     </div>
+
+<div class="line"></div>
   </div>
   <div class="footer2">
     <div class="container">
@@ -58,9 +61,9 @@
         <img src="vistas/img/iconos/yt.png" alt="">
         <img src="vistas/img/iconos/gl.png" alt="">
       </div>
-      <div class="col-sm copyrigth">
+      <div class="col-sm copyrigth text_copy">
      
-        <p>© Copyright AloheHomeSpa| 2020</p>
+        <p>© Copyright AloheHomeSpa | 2020</p>
       </div>
       <div class="col-sm copyrigth">
    

@@ -94,7 +94,7 @@ display:none;
 } 
 
 .btn-toggle {
-  background: rgb(255, 255, 255, 0);
+  background: rgb(255, 255, 255, 100);
   position: fixed;
   float: right;
   top: 0px;
@@ -330,7 +330,7 @@ display:none;
 
 
   .btn-toggle {
-    background: rgb(255, 255, 255, 0);
+    background: rgb(255, 255, 255, 100);
   }
 
   .seccionToggle {
@@ -1655,7 +1655,7 @@ display:block;
 
 
   .btn-toggle {
-    background: rgb(255, 255, 255, 0);
+    background: rgb(255, 255, 255, 100);
   }
 
   .seccionToggle {

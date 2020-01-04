@@ -8,15 +8,32 @@ footer{
     width: 50%;
 
 }
-.datos_contacto{
-    float: left;
+.datos_contacto p{
+    position: relative;
+    display: inline-block;
+    font-family: 'nexabold';
+    font-size: 16px;
+    float: right;
+    right: 0px;
+    padding-top: 50px;
+    text-align: right;
+
+}
+.datos_contacto p span{
+    font-size: 20px;
+    
+
 }
 .sucursales img{
     width: 22px;
 }
+.sucursales h5{
+    padding:5px 0px;
+}
 .sucursales p{
     font-size: 13px;
     font-family: 'nexalight';
+    padding-left: 25px;
 }
 .footer2{
     display: inline-block;
@@ -32,16 +49,22 @@ footer{
 .redes_sociales p{
     font-size: 12px;
     text-align: center;
+    
 
 }
 .copyrigth img{
     width: 150px;
     float:right;
-}
 
+}
+.text_copy p{
+    padding-top: 20px;
+    
+}
 .redes_sociales img{
    
     float:left;
     width: 30px;
+    margin-top: 15px;
 
 }

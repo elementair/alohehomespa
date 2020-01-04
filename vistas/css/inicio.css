@@ -121,7 +121,7 @@ No media query for `xs` since this is the default in Bootstrap */
 }
 
 .seccion_nosotros .imgnosotros{
-    width: 35%;
+    width: 40%;
     right: 0;
     float: right;
 }

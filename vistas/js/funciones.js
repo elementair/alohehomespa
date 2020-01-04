@@ -28,7 +28,7 @@ $(document).ready(function(){
 	    $('html, body').animate({scrollTop: posicionIndex3}, 1000);
 	    // $('#fixedLogoNav img').attr('src', "svg/logo.svg");
 
-	    $(".btn-toggle").css("background", "#16171900");
+	    $(".btn-toggle").css("background", "#fff");
 	    
 	});
 

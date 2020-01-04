@@ -6,12 +6,12 @@ $(window).scroll(function(){
     if($(this).scrollTop() > offset){
         $('.to-top').fadeIn(duration);
         $(".brand_container img").css("width", "180px");
-        $(".btn-toggle").css("background", "rgb(255, 255, 255, .80)");
+        $(".btn-toggle").css("background", "rgb(255, 255, 255, .9)");
 
     }else{
         $('.to-top').fadeOut(duration);
         $(".brand_container img").css("width", "200px");
-        $(".btn-toggle").css("background", "rgb(255, 255, 255, 0)");
+        $(".btn-toggle").css("background", "rgb(255, 255, 255, 1)");
     }  
 
 });
