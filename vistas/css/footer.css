@@ -68,3 +68,81 @@ footer{
     margin-top: 15px;
 
 }
+
+.to-top{
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    width: 32px;
+    height: 32px;
+}
+
+
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+
+    .imagen_footer img {
+        width: 100%;
+    }
+
+    .datos_contacto p {
+       
+        padding-top: 0px;
+        text-align: center;
+        width: 100%;
+    }
+    .redes_sociales p{
+        font-size: 12px;
+        text-align: center;
+        
+
+    }
+    .copyrigth img{
+        width: 120px;
+        float:center;
+
+    }
+
+    .redes_sociales img{
+   
+        float: center;
+        width: 30px;
+        margin-top: 15px;
+
+    }
+    .text_copy{
+        display: none;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

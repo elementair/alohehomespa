@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="vistas/css/menu.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/footer.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/flexisel.css">
+    <link rel="stylesheet" href="vistas/aos/aos.css">
 
     <!-- 
         mdb
@@ -94,7 +95,7 @@ if(isset($_GET["pagina"])){
 include_once $base."modulo/footer.php";
 
 ?>
-<a href="#top" class="to-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
+<a href="#top" class="to-top"><img src="vistas/img/top.png" alt=""></i></a>
 
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -140,6 +141,7 @@ include_once $base."modulo/footer.php";
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="vistas/js/jquery.flexisel.js"></script>
 <script src="vistas/js/flexisel.js"></script>
+<script src="vistas/aos/aos.js"></script>
 <script>
     AOS.init(); 
 </script>

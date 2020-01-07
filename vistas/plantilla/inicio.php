@@ -9,8 +9,10 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="vistas/img/inicio/banner-home.jpg" alt="First slide">
+                <div class="d-block w-100 imagen_banner" style="background-image: url(vistas/img/inicio/banner-home.jpg);" alt="First slide"></div>
+                <!-- <img class="d-block w-100 banner_pc" src="vistas/img/inicio/banner-home.jpg" > -->
             </div>
+
             <!-- <div class="carousel-item">
                 <img class="d-block w-100" src="vistas/img/inicio/banner-home2.jpg" alt="Second slide">
             </div> -->
@@ -31,9 +33,9 @@
         <div class="texto-banner">
             <div class="container">
 
-                <p class="txt_sin_espacio">TIME TO &nbsp; &nbsp; &nbsp; 
+                <p data-aos="zoom-out-up" data-aos-duration="1500" class="txt_sin_espacio">TIME TO &nbsp; &nbsp; &nbsp; 
                 <br />
-                <span  class="txt_sin_espacio">Relax</span>
+                <span  data-aos="zoom-out-up" data-aos-duration="1500" class="txt_sin_espacio">Relax</span>
                 </p> 
                 <br />
                 <a class="btn-green btn_agendar" href="#" target="_blank">Agenda tu cita</a>
@@ -54,16 +56,30 @@
 
     <div class="container">
 
-        <div class="row">
+        <div class="row paquetes_pc">
+
             <div class="col-sm img-paquetes">
-                    <img src="vistas/img/paquetes/paquete1.png" alt="">
+                <img src="vistas/img/paquetes/paquete1.png" alt="">
             </div> 
+
             <div class="col-sm img-paquetes">
-                    <img src="vistas/img/paquetes/paquete2.png" alt="">
+                <img src="vistas/img/paquetes/paquete2.png" alt="">
             </div>
+
             <div class="col-sm img-paquetes">
-                    <img src="vistas/img/paquetes/paquete3.png" alt="">
+                <img src="vistas/img/paquetes/paquete3.png" alt="">
             </div>  
+
+        </div>
+
+        <div class="row paquetes_movil">
+
+            <ul id="flexiselDemo3">
+                <li> <img src="vistas/img/paquetes/paquete1.png" alt=""></li>
+                <li> <img src="vistas/img/paquetes/paquete2.png" alt=""></li>
+                <li> <img src="vistas/img/paquetes/paquete3.png" alt=""></li>                               
+            </ul>  
+
         </div>
 
     </div>
@@ -86,31 +102,31 @@
             <span class="txt_aloe">Aloe</span>
         </div>
         <div class="row">
-            <div class="col-sm img-categoria">
+            <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="2000">
                 <img src="vistas/img/categorias/faciales.png" alt="">
                 <p>Faciales</p>
             </div>
-            <div class="col-sm img-categoria">
+            <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="1800">
                 <img src="vistas/img/categorias/masajes.png" alt="">
                 <p>Masajes</p>
             </div>
-            <div class="col-sm img-categoria">
+            <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="1600">
                 <img src="vistas/img/categorias/depilacion.png" alt="">
                 <p>Depilacion</p>
             </div>
-            <div class="col-sm img-categoria">
+            <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="1400">
                 <img src="vistas/img/categorias/pedicure.png" alt="">
                 <p>Pedicure</p>
             </div>
-            <div class="col-sm img-categoria">
+            <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="1200">
                 <img src="vistas/img/categorias/aparatologia.png" alt="">
                 <p>Aparatologia</p>
             </div>
-            <div class="col-sm img-categoria">
+            <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="1000">
                 <img src="vistas/img/categorias/AquaSpa.png" alt="">
                 <p>Aqua Spa</p>
             </div>
-            <div class="col-sm img-categoria">
+            <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="800">
                 <img src="vistas/img/categorias/coberturas.png" alt="">
                 <p>Coberturas</p>
             </div>
@@ -135,24 +151,24 @@
 
         <div class="container">
 
-            <div class="col-sm w-50 imgnosotroslogo">
+            <div class="col-12 col-sm imgnosotroslogo">
                 <img src="vistas/img/logo/ahlogo.png" alt="">
                 <p>
-                Aloe Home Spa fue creada en 2016 pensando en el bienestar 
-                de las personas y en cómo poder ayudarles a eliminar 
-                sus altos niveles de estrés por la vida tan ocupada en su trabajo, 
-                oficinas, familia, hogar y problemas de la vida diaria que constantemente 
-                afectan nuestra salud física, mental, estética y emocional. 
+                    Aloe Home Spa fue creada en 2016 pensando en el bienestar 
+                    de las personas y en cómo poder ayudarles a eliminar 
+                    sus altos niveles de estrés por la vida tan ocupada en su trabajo, 
+                    oficinas, familia, hogar y problemas de la vida diaria que constantemente 
+                    afectan nuestra salud física, mental, estética y emocional. 
 
-                La belleza es otra experiencia que puedes vivir en Aloe Home Spa 
-                de manera profesional descubriendo a través de los sentidos 
-                como disfrutar de masajes de moldeo corporal, eliminación de celulitis, 
-                disminución de estrías, notables cambios en desvanecimiento de líneas 
-                de expresión facial así como cuidados de la piel en general. 
+                    La belleza es otra experiencia que puedes vivir en Aloe Home Spa 
+                    de manera profesional descubriendo a través de los sentidos 
+                    como disfrutar de masajes de moldeo corporal, eliminación de celulitis, 
+                    disminución de estrías, notables cambios en desvanecimiento de líneas 
+                    de expresión facial así como cuidados de la piel en general. 
                 </p>
 
             </div>
-            <div class="col-sm">
+            <div class="col-12 col-sm">
          
             </div>
 
@@ -172,20 +188,17 @@
 
     <div class="container">
 
-            <div class="row subtitulo">
-                <span class="txt_verde">Agenda tu cita</span> 
-            </div>
+        <div class="row subtitulo">
+            <span class="txt_verde" data-aos="zoom-in" data-aos-duration="1500">Agenda tu cita</span> 
+        </div>
 
-      
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" action="#!">
 
+             <div class="row">
 
-            <!--Card content-->
+                <div class="col-12  col-sm">
 
-
-                <!-- Form -->
-                <form class="text-center" style="color: #757575;" action="#!">
-             
-                <div class="col-sm w-50">
                     <!-- Subject -->
                     <span>Elige un servicio</span>
                     <select class="browser-default custom-select" >
@@ -215,17 +228,22 @@
                         <label class="form-check-label" for="materialUnchecked">Terminos y condiciones</label>
                     </div>
 
-
                     <!-- Send button -->
                     <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">CONTINUAR</button>
+                
                 </div>
-                <div class="col-sm w-50">
-                    <!-- Name -->
+
+                <div class="col-12 col-sm">
+
+                    <label for=""> Datos personales</label>
+
+                    <!-- nombre -->
                     <div class="md-form mt-3">
                         <input type="text" id="materialContactFormName" class="form-control">
                         <label for="materialContactFormName">Name</label>
                     </div>
-                    <!-- Name -->
+
+                    <!-- apellido -->
                     <div class="md-form mt-3">
                         <input type="text" id="materialContactFormName" class="form-control">
                         <label for="materialContactFormName">Apellido</label>
@@ -237,19 +255,20 @@
                         <label for="materialContactFormEmail">E-mail</label>
                     </div>
 
-                     <!-- Celphone -->
+                     <!-- telefono -->
                      <div class="md-form mt-3">
                         <input type="text" id="materialContactFormNumber" class="form-control">
                         <label for="materialContactFormName">Teléfono</label>
                     </div>
+
                 </div>
+                
+            </div>
 
-                </form>
-                <!-- Form -->
-
-        
-    <!-- Material form contact -->    
+        </form>
+        <!-- Form -->
     </div>
+
 </section>
 
 <div class="line"></div>
@@ -262,8 +281,8 @@
     <div class="container">
 
         <div class="row subtitulo">
-            <span class="txt_verde"> Conoce</span> 
-            <span class="txt_azul"> Nuestras Sucursales</span> 
+            <span class="txt_verde" data-aos="zoom-in" data-aos-duration="1500"> Conoce</span> 
+            <span class="txt_azul" data-aos="zoom-in" data-aos-duration="1500"> Nuestras Sucursales</span> 
         </div>
 
         <div class="row">
@@ -297,11 +316,11 @@
         <div class="row">
 
    
-            <div class="col-sm w-50 seccion_txt">
+            <div class="col-12  col-sm seccion_txt">
                      <div class="line"></div>
 
                 <div class="subtitulo">
-                    <span class="txt_azul txt_sin_espacio">Forma parte del equipo de</span> 
+                    <span class="txt_azul txt_sin_espacio" >Forma parte del equipo de</span> 
                     <span class="txt_verde txt_sin_espacio">Alohe Home Spa</span> 
                     <span class="txt_italica">¡Tenemos un plan de inversión para ti! </span>
                 </div>
@@ -320,10 +339,10 @@
              
             </div>
 
-            <div class="col-sm w-50 seccion_img">
-                        
-
+            <div class="col-12 col-sm seccion_img">
+         
                 <img src="vistas/img/laboral/laboral.png" alt="">
+          
 
             </div>
         
