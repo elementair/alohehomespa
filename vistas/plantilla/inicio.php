@@ -38,7 +38,7 @@
                 <span  data-aos="zoom-out-up" data-aos-duration="1500" class="txt_sin_espacio">Relax</span>
                 </p> 
                 <br />
-                <a class="btn-green btn_agendar" href="#" target="_blank">Agenda tu cita</a>
+                <a class="btn-green-aloe btn_agendar" href="index#seccion_citas" data-aos="zoom-out-up" data-aos-duration="1500" >Agenda tu cita</a>
                 
             </div>
         </div>
@@ -58,15 +58,15 @@
 
         <div class="row paquetes_pc">
 
-            <div class="col-sm img-paquetes">
+            <div class="col-sm img-paquetes" data-aos="zoom-in-up" data-aos-duration="1500">
                 <img src="vistas/img/paquetes/paquete1.png" alt="">
             </div> 
 
-            <div class="col-sm img-paquetes">
+            <div class="col-sm img-paquetes" data-aos="zoom-in-up" data-aos-duration="1100">
                 <img src="vistas/img/paquetes/paquete2.png" alt="">
             </div>
 
-            <div class="col-sm img-paquetes">
+            <div class="col-sm img-paquetes" data-aos="zoom-in-up" data-aos-duration="1500">
                 <img src="vistas/img/paquetes/paquete3.png" alt="">
             </div>  
 
@@ -151,25 +151,28 @@
 
         <div class="container">
 
-            <div class="col-12 col-sm imgnosotroslogo">
-                <img src="vistas/img/logo/ahlogo.png" alt="">
-                <p>
-                    Aloe Home Spa fue creada en 2016 pensando en el bienestar 
-                    de las personas y en cómo poder ayudarles a eliminar 
-                    sus altos niveles de estrés por la vida tan ocupada en su trabajo, 
-                    oficinas, familia, hogar y problemas de la vida diaria que constantemente 
-                    afectan nuestra salud física, mental, estética y emocional. 
+            <div class="row">
 
-                    La belleza es otra experiencia que puedes vivir en Aloe Home Spa 
-                    de manera profesional descubriendo a través de los sentidos 
-                    como disfrutar de masajes de moldeo corporal, eliminación de celulitis, 
-                    disminución de estrías, notables cambios en desvanecimiento de líneas 
-                    de expresión facial así como cuidados de la piel en general. 
-                </p>
+                <div class="imgnosotroslogo">
 
-            </div>
-            <div class="col-12 col-sm">
-         
+                    <img src="vistas/img/logo/ahlogo.png" alt="">
+
+                    <p>
+                        Aloe Home Spa fue creada en 2016 pensando en el bienestar 
+                        de las personas y en cómo poder ayudarles a eliminar 
+                        sus altos niveles de estrés por la vida tan ocupada en su trabajo, 
+                        oficinas, familia, hogar y problemas de la vida diaria que constantemente 
+                        afectan nuestra salud física, mental, estética y emocional. 
+
+                        La belleza es otra experiencia que puedes vivir en Aloe Home Spa 
+                        de manera profesional descubriendo a través de los sentidos 
+                        como disfrutar de masajes de moldeo corporal, eliminación de celulitis, 
+                        disminución de estrías, notables cambios en desvanecimiento de líneas 
+                        de expresión facial así como cuidados de la piel en general. 
+                    </p>
+
+                </div>
+               
             </div>
 
         </div>
@@ -189,7 +192,7 @@
     <div class="container">
 
         <div class="row subtitulo">
-            <span class="txt_verde" data-aos="zoom-in" data-aos-duration="1500">Agenda tu cita</span> 
+            <span class="txt_verde">Agenda tu cita</span> 
         </div>
 
         <!-- Form -->
@@ -281,13 +284,14 @@
     <div class="container">
 
         <div class="row subtitulo">
-            <span class="txt_verde" data-aos="zoom-in" data-aos-duration="1500"> Conoce</span> 
-            <span class="txt_azul" data-aos="zoom-in" data-aos-duration="1500"> Nuestras Sucursales</span> 
+            <span class="txt_verde" > Conoce</span> 
+            <span class="txt_azul" > Nuestras Sucursales</span> 
         </div>
 
         <div class="row">
 
             <ul id="flexiselDemo4">
+
                 <li><img src="vistas/img/sucursales/1.jpg" /></li>
                 <li><img src="vistas/img/sucursales/2.jpg" /></li>
                 <li><img src="vistas/img/sucursales/3.jpg" /></li>
@@ -299,6 +303,7 @@
             </ul>  
 
         </div>
+
     </div>
 
 </section>
@@ -335,7 +340,7 @@
 
                 </p>
 
-                <a class="btn-green btn_laboral" href="#" target="_blank">Únete a nuestro Equipo</a>
+                <a class="btn-green-aloe btn_laboral" href="#" target="_blank" data-aos="zoom-in" data-aos-duration="1500" >Únete a nuestro Equipo</a>
              
             </div>
 

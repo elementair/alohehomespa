@@ -11,6 +11,7 @@ No media query for `xs` since this is the default in Bootstrap */
     background-size: cover;
     background-position: center;
     height: 70vh;
+    min-height: 650px;
  }
 
  .texto-banner{
@@ -149,6 +150,7 @@ No media query for `xs` since this is the default in Bootstrap */
 
 .seccion_nosotros .imgnosotros{
     width: 40%;
+    height: auto;
     right: 0;
     float: right;
 }
@@ -175,7 +177,6 @@ No media query for `xs` since this is the default in Bootstrap */
  
 @media (max-width: 576px) {
      .imagen_banner{
-        
         background-position: center;
         
      }
@@ -187,6 +188,7 @@ No media query for `xs` since this is the default in Bootstrap */
         
     .texto-banner p{
         font-size: 35px;
+
     }
 
     .texto-banner span{
@@ -202,6 +204,7 @@ No media query for `xs` since this is the default in Bootstrap */
     }
     .txt_sin_espacio {
         margin-bottom: -10px;
+
     }
     .paquetes_movil{
         display: initial;
@@ -218,6 +221,7 @@ No media query for `xs` since this is the default in Bootstrap */
     }
     .inicio_carousel{
         margin-top: 70px;
+        
      }
 
      .banner_pc{
@@ -228,10 +232,24 @@ No media query for `xs` since this is the default in Bootstrap */
       display: initial;
 
     }
+
+     
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+
+    .seccion_nosotros .imgnosotros{
+        display: none;
+    }
+
+    .seccion_nosotros .imgnosotros {
+        width: 50%;
+    }
+    
+    .subtitulo {
+        font-size: 30px;
+    }
 
 }
 

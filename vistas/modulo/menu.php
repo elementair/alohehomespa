@@ -1,3 +1,44 @@
+<style>
+.dropdown>.dropdown-menu {
+  top: 140%;
+  transition: 0.8   s all ease-in-out;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+  top: 115%;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+    color:#aaa;
+}
+
+
+.dropdown-menu {
+    border: 0px solid rgba(0,0,0,.15);
+    box-shadow: 1px 0px 8px #eaeaea; 
+    border-radius: 0px !important;
+}
+
+.dropdown-menu a {
+    padding: 10px 10px !important;
+    line-height: 15px;
+}
+
+.dropdown-toggle::after {
+
+    display: block;
+    width: 5px;
+    margin-top: -30px;
+    margin-left: 40%;
+    color: #ccc;
+}
+
+
+</style>
+
+
  <!-- MENU RESPONSIVO MOVIL -->
     <nav class="btn-toggle">
         <div class="brand_container ">
@@ -6,15 +47,43 @@
         <div class="menu-nav">
             <div id="nav">
                 <li><a id="inicio" href="index">HOME</a></li>
-                <li><a id="nosotros" href="index?pagina=servicios" >SERVICIOS</a></li>
-                <li><a id="servicios" href="index?pagina=sucursales">SUCURSALES</a></li>
-                <li><a id="contacto" href="index?pagina=productos">PRODUCTOS</a></li>
+                
+                <li class="dropdown dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a id="nosotros" href="index?pagina=servicios" >SERVICIOS</a>
+               
+                    <div class="submenu dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+
+                 </li>
+                 <li class="dropdown dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a id="servicios" href="index?pagina=sucursales">SUCURSALES</a>
+               
+                    <div class="submenu dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+
+                 </li>
+                 <li class="dropdown dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a id="contacto" href="index?pagina=productos">PRODUCTOS</a>
+               
+                    <div class="submenu dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+
+                 </li>
                 <li><a id="contacto" href="index?pagina=inversionistas">INVERSIONISTAS</a></li>
             </div>
         </div>
         <div class="brand-datos">
             <a href="#" target="_blank"><img src="vistas/img/iconos/user.png"></a>
-            <a class="btn-green btn_agendar" href="#" target="_blank">agenda tu cita</a>
+            <a class="btn-green-aloe btn_agendar" href="#" target="_blank">agenda tu cita</a>
             <a href="#" target="_blank"><img src="vistas/img/iconos/cart.png"></a>
         </div>
         <a href="#" onclick="return false" id="btn-toggle"><img src="vistas/img/menu_responsivo.png" class="btn-menu" height="25" width="30" alt=""></a>
@@ -24,12 +93,15 @@
         <div class="wrap">
             <div class="container-fluid">
                 <div class="movil">
+
                     <div class="cont1">
                         <p class="title-men"><a id="inicio" href="index">HOME</a></p>
                     </div>
+
                     <div class="cont1">
                         <p class="title-men"><a id="nosotros" href="index?pagina=servicios">SERVICIOS</a></p>
                     </div>
+
                     <div class="cont1">
                         <p class="title-men"><a id="servicios" href="index?pagina=sucursales">SUCURSALES</a></p>
                     </div>
@@ -37,6 +109,7 @@
                     <div class="cont1">
                         <p class="title-men"><a id="contacto" href="index?pagina=productos">PRODUCTOS</a></p>
                     </div>
+
                     <div class="cont1">
                         <p class="title-men"><a id="contacto" href="index?pagina=inversionistas">INVERSIONISTAS</a></p>
                     </div>
@@ -50,6 +123,7 @@
                         </div>
                       
                     </div>
+
                 </div>
             </div>
         </div>

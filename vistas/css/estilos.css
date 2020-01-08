@@ -52,10 +52,12 @@ section{
     width: 100%;
     position: relative;
 }
-.btn-green{
+.btn-green-aloe{
     background-color: #a8d162 ;
     padding: 5px;
-    border-radius: 10px;    
+    border-radius: 10px; 
+    color: #000 !important;
+    cursor: pointer;   
 }
 
 .line{

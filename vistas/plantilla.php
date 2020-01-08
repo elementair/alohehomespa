@@ -26,7 +26,6 @@
     <link rel="stylesheet" type="text/css" href="vistas/css/footer.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/flexisel.css">
     <link rel="stylesheet" href="vistas/aos/aos.css">
-
     <!-- 
         mdb
      -->
@@ -122,6 +121,13 @@ include_once $base."modulo/footer.php";
             nocookie: true
         }
     });
+
+    $('ul.nav li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(1000).fadeIn(1000);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(1000).fadeOut(1000);
+    });
+
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB-M2C9yZRD7FFdjwjSjJfnsotae_Y8Nk" type="text/javascript"></script>
