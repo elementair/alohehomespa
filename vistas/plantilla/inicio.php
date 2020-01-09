@@ -112,7 +112,7 @@
             </div>
             <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="1600">
                 <img src="vistas/img/categorias/depilacion.png" alt="">
-                <p>Depilacion</p>
+                <p>Depilación</p>
             </div>
             <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="1400">
                 <img src="vistas/img/categorias/pedicure.png" alt="">
@@ -120,7 +120,7 @@
             </div>
             <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="1200">
                 <img src="vistas/img/categorias/aparatologia.png" alt="">
-                <p>Aparatologia</p>
+                <p>Aparatología</p>
             </div>
             <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="1000">
                 <img src="vistas/img/categorias/AquaSpa.png" alt="">
@@ -206,8 +206,8 @@
                     <span>Elige un servicio</span>
                     <select class="browser-default custom-select" >
 
-                        <option value="" disabled >-Elige una opcion-</option>
-                        <option value="1" selected >Depilacion definitiva</option>
+                        <option value="" disabled >-Elige una opción-</option>
+                        <option value="1" selected >Depilación definitiva</option>
                         <option value="2">Faciales</option>
                         <option value="3">Masajes Corporales</option>
                         <option value="4">AquaSpa</option>
@@ -222,13 +222,13 @@
                     <!--Message-->
                     <div class="md-form">
                         <textarea id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>
-                        <label for="materialContactFormMessage">Message</label>
+                        <label for="materialContactFormMessage">Mensaje</label>
                     </div>
 
                     <!-- Copy -->
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="materialUnchecked">
-                        <label class="form-check-label" for="materialUnchecked">Terminos y condiciones</label>
+                        <label class="form-check-label" for="materialUnchecked">Términos y condiciones</label>
                     </div>
 
                     <!-- Send button -->
@@ -243,7 +243,7 @@
                     <!-- nombre -->
                     <div class="md-form mt-3">
                         <input type="text" id="materialContactFormName" class="form-control">
-                        <label for="materialContactFormName">Name</label>
+                        <label for="materialContactFormName">Nombre</label>
                     </div>
 
                     <!-- apellido -->
@@ -326,7 +326,7 @@
 
                 <div class="subtitulo">
                     <span class="txt_azul txt_sin_espacio" >Forma parte del equipo de</span> 
-                    <span class="txt_verde txt_sin_espacio">Alohe Home Spa</span> 
+                    <span class="txt_verde txt_sin_espacio">Aloe Home Spa</span> 
                     <span class="txt_italica">¡Tenemos un plan de inversión para ti! </span>
                 </div>
 

@@ -10,9 +10,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="description" content="Aloe Home Spa surge como una idea de negocio para crear experiencias inolvidables a nuestros clientes logrando enlazar un modelo de negocio rentable entre el inversionista y los clientes finales garantizando la satisfacción total de nuestros usuarios otorgando siempre los mejores servicios que ellos merecen.">
-    <meta name="keywords" content="alohe home spa, diseño, spa guadalajara, masajes, faciales, depilación definitiva">
-    <meta name="author" content="Alohe Home Spa">
-    <title>Alohe Home Spa</title>
+    <meta name="keywords" content="aloe home spa, diseño, spa guadalajara, masajes, faciales, depilación definitiva">
+    <meta name="author" content="Aloe Home Spa">
+    <title>Aloe Home Spa</title>
     <!--
         css
      -->

@@ -20,10 +20,16 @@
 **/
 
 // Datos de conexion a la base de datos
-$bd       = 'creactiv_shifra';
+// $bd       = 'creactiv_shifra';
+// $servidor = 'localhost';
+// $usuario  = 'root';
+// $pass     = '';
+
+
+$bd       = 'creactiv_aloehomespa';
 $servidor = 'localhost';
-$usuario  = 'root';
-$pass     = '';
+$usuario  = 'creactiv_aloe';
+$pass     = 'aloe2020';
 
 
 // Nos conectamos a la base de datos

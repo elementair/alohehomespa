@@ -4,10 +4,36 @@ class Empresas{
     public function __construct(){
         $empresa= array(
             'nombre_empresa'   =>'SHIFRA SPA',
-            'nombre_base_datos'=>'creactiv_shifra',
+
+            /*
+            * 
+            **************************************
+            *
+            LOCALHOST
+            *
+            **************************************
+            *
+            */
+           
+            // 'nombre_base_datos'=>'creactiv_shifra',
+            // 'host'             =>'localhost',
+            // 'user'             =>'root',
+            // 'pass'             =>'');
+
+            /*
+            * 
+            **************************************
+            *
+            SERVER
+            *
+            **************************************
+            *
+            */
+            'nombre_base_datos'=>'creactiv_aloehomespa',
             'host'             =>'localhost',
-            'user'             =>'root',
-            'pass'             =>'');
+            'user'             =>'creactiv_aloe',
+            'pass'             =>'aloe2020');
+           
         $this->empresas = array('99'=>$empresa);
     }
 }
