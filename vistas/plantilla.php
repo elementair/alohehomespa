@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="vistas/css/estilos.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/menu.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/footer.css">
+    <link rel="stylesheet" href="vistas/css/buscador.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/flexisel.css">
     <link rel="stylesheet" href="vistas/aos/aos.css">
     <!-- 
@@ -35,6 +36,7 @@
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/mdb.lite.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/addons/datatables-select.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/modules/animations-extended.min.css">
+
            
 </head>
 <body id="top">
@@ -51,6 +53,11 @@ if(isset($_GET["pagina"])){
     if ($rutas[0] == "servicios") {
         ?>
             <link rel="stylesheet" type="text/css" href="vistas/css/servicios.css">
+            <link rel="stylesheet" type="text/css" href="vistas/css/sidebar.css">
+            <link rel="stylesheet" href="vistas/css/servicios.css">
+
+            <script src="vistas/js/sidebar.js"></script>
+
         <?php
         include_once $base."plantilla/servicios.php";
     }

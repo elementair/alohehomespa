@@ -1,0 +1,44 @@
+.servicios_header{
+	margin-top: 90px;
+	width: 100%;
+	display: inline-block;
+	position: relative;
+	height: 200px;
+}
+.banner_promocion{
+	background-size: cover;
+	background-position: top;	
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+
+}
+
+/*Tarjeta Producto*/
+
+.img_producto{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+
+}
+.table_details .table {
+    width: 100%;
+    margin-bottom: 0rem !important;
+    color: #212529;
+}
+.table_details p{
+	margin-top: 0rem !important;
+	margin-bottom: 0rem !important;
+}
+.table_details table.table th, table.table td {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.card-header {
+    background-color: rgb(148, 211, 80, 0.40);
+    border-bottom: 1px solid rgb(148, 211, 80 , 0.50);
+}

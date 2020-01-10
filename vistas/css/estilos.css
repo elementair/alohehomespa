@@ -59,6 +59,9 @@ section{
     color: #000 !important;
     cursor: pointer;   
 }
+.text-green-aloe{
+    color: #7fca00 ;
+}
 
 .line{
     margin-top: 50px;

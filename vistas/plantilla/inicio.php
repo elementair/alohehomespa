@@ -6,7 +6,6 @@
 
     <div id="carouselInicio" class="carousel slide" data-ride="carousel">
 
-
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="d-block w-100 imagen_banner" style="background-image: url(vistas/img/inicio/banner-home.jpg);" alt="First slide"></div>
@@ -28,8 +27,6 @@
             <span class="sr-only">Next</span>
         </a>
 
-        
-       
         <div class="texto-banner">
             <div class="container">
 
@@ -41,7 +38,21 @@
                 <a class="btn-green-aloe btn_agendar" href="index#seccion_citas" data-aos="zoom-out-up" data-aos-duration="1500" >Agenda tu cita</a>
                 
             </div>
+            <!--  <div class="buscador">
+
+            <div class="d-flex justify-content-center h-100">
+
+                <div class="searchbar">
+                    <input class="search_input" type="text" name="" placeholder="Search...">
+                    <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                </div>
+
+            </div> -->
+
         </div>
+
+        </div>
+                    
     </div>
 
 </section>
