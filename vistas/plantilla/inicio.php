@@ -35,7 +35,7 @@
                 <span  data-aos="zoom-out-up" data-aos-duration="1500" class="txt_sin_espacio">Relax</span>
                 </p> 
                 <br />
-                <a class="btn-green-aloe btn_agendar" href="index#seccion_citas" data-aos="zoom-out-up" data-aos-duration="1500" >Agenda tu cita</a>
+                <a class="btn-green-aloe  btn_agendar" href="index#seccion_citas" data-aos="zoom-out-up" data-aos-duration="1500" >Agenda tu cita</a>
                 
             </div>
             <!--  <div class="buscador">

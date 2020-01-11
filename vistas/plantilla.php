@@ -12,6 +12,7 @@
     <meta name="description" content="Aloe Home Spa surge como una idea de negocio para crear experiencias inolvidables a nuestros clientes logrando enlazar un modelo de negocio rentable entre el inversionista y los clientes finales garantizando la satisfacción total de nuestros usuarios otorgando siempre los mejores servicios que ellos merecen.">
     <meta name="keywords" content="aloe home spa, diseño, spa guadalajara, masajes, faciales, depilación definitiva">
     <meta name="author" content="Aloe Home Spa">
+    
     <title>Aloe Home Spa</title>
     <!--
         css
@@ -50,7 +51,7 @@ $rutas = array();
 if(isset($_GET["pagina"])){
     $rutas = explode("/", $_GET["pagina"]);
     // Mi perfil
-    if ($rutas[0] == "servicios") {
+    if ($rutas[0] == "servicios") { 
         ?>
             <link rel="stylesheet" type="text/css" href="vistas/css/servicios.css">
             <link rel="stylesheet" type="text/css" href="vistas/css/sidebar.css">
@@ -60,6 +61,50 @@ if(isset($_GET["pagina"])){
 
         <?php
         include_once $base."plantilla/servicios.php";
+    }   
+    if ($rutas[0] == "servicios_detalle") {
+    ?>
+        <link rel="stylesheet" type="text/css" href="vistas/css/servicios.css">
+        <link rel="stylesheet" type="text/css" href="vistas/css/sidebar.css">
+        <link rel="stylesheet" href="vistas/css/servicios_detalles.css">
+        <link rel="stylesheet" href="vistas/css/slideshow_gallery.css">
+
+        <script src="vistas/js/sidebar.js"></script>
+        <script src="vistas/js/slideshow_gallery.js"></script>
+        <script>
+            
+            var slideIndex = 1;
+            showSlides(slidIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+
+    <?php
+    include_once $base."plantilla/servicios_detalle.php";
     }
     elseif ($rutas[0] == "sucursales") {
         ?>

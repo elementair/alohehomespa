@@ -1,0 +1,46 @@
+.rs_s_detalles img{
+    margin: 5px;
+    padding: 5px;
+}
+
+.detalles_opiniones{
+
+
+
+}
+
+.detalles_opiniones .nav-tabs {
+    display:none;
+}
+
+.detalles_opiniones .card {
+    font-weight: 400;
+    border: 0;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0), 0 2px 10px 0 rgba(0,0,0,0);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0), 0 2px 10px 0 rgba(0,0,0,0);
+}
+
+@media(min-width:768px) {
+    .detalles_opiniones .nav-tabs {
+        display: flex;
+    }
+    
+    .detalles_opiniones .card {
+        border: none;
+    }
+
+    .detalles_opiniones .card .card-header {
+        display:none;
+    }  
+
+    .detalles_opiniones .card .collapse{
+        display:block;
+    }
+}
+
+@media(max-width:767px){
+    .tab-content > .tab-pane {
+        display: block !important;
+        opacity: 1;
+    }
+}

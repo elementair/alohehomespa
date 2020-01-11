@@ -25,20 +25,21 @@
 	border-radius: 50%;
 
 }
-.table_details .table {
+.servicio_contenedor .table_details .table {
     width: 100%;
     margin-bottom: 0rem !important;
     color: #212529;
 }
-.table_details p{
+.servicio_contenedor .table_details p{
 	margin-top: 0rem !important;
 	margin-bottom: 0rem !important;
 }
-.table_details table.table th, table.table td {
+.servicio_contenedor .table_details table.table th, table.table td {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
-.card-header {
+.servicio_contenedor .card-header {
     background-color: rgb(148, 211, 80, 0.40);
     border-bottom: 1px solid rgb(148, 211, 80 , 0.50);
 }
+
