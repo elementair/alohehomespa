@@ -137,7 +137,7 @@ date_default_timezone_set("America/Mexico_City");
   font-style:bold;
   padding:5px;
   text-align:center;
-  color: #4D0000;
+  color: #40c0f0;
 }
 hr{
   border:2px solid #f3f3f3;

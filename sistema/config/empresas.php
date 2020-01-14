@@ -15,10 +15,10 @@ class Empresas{
             *
             */
            
-            // 'nombre_base_datos'=>'creactiv_shifra',
-            // 'host'             =>'localhost',
-            // 'user'             =>'root',
-            // 'pass'             =>'');
+            'nombre_base_datos'=>'creactiv_alohehomespa  ',
+            'host'             =>'localhost',
+            'user'             =>'root',
+            'pass'             =>'');
 
             /*
             * 
@@ -29,10 +29,10 @@ class Empresas{
             **************************************
             *
             */
-            'nombre_base_datos'=>'creactiv_aloehomespa',
-            'host'             =>'localhost',
-            'user'             =>'creactiv_aloe',
-            'pass'             =>'aloe2020');
+            // 'nombre_base_datos'=>'creactiv_aloehomespa',
+            // 'host'             =>'localhost',
+            // 'user'             =>'creactiv_aloe',
+            // 'pass'             =>'aloe2020');
            
         $this->empresas = array('99'=>$empresa);
     }

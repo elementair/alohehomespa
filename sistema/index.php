@@ -54,7 +54,6 @@ if(isset($_SESSION['id'])){
     $user_usuario = $reguistros_usuario[0]['usuario_user'];
     $foto_usuario = $reguistros_usuario[0]['usuario_archivo'];
     $descripcion_usuario = $reguistros_usuario[0]['usuario_descripcion'];
-    
 }
 
 ?>
@@ -63,7 +62,7 @@ if(isset($_SESSION['id'])){
 	<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Administrador | ShifraSpa</title>
+  <title>Admin | AloeHomeSpa</title>
   <link rel="shortcut icon" type="image/ico" href="views/img/admin_log.ico"/>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -80,7 +79,7 @@ if(isset($_SESSION['id'])){
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
   <!-- <link rel="stylesheet" href="views/dist/css/skins/skin-red.min.css"> -->
-  <link rel="stylesheet" href="views/dist/css/skins/skin-guinda.min.css">
+  <link rel="stylesheet" href="views/dist/css/skins/skin-aloe.min.css">
   <link rel="stylesheet" href="views/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap datepicker -->
   <link rel="stylesheet" href="views/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
@@ -92,7 +91,6 @@ if(isset($_SESSION['id'])){
   <link rel="stylesheet" href="views/plugins/timepicker/bootstrap-timepicker.min.css">
   <!-- Select2 -->
   <link rel="stylesheet" href="views/bower_components/select2/dist/css/select2.min.css">
-
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="views/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
@@ -115,7 +113,7 @@ if(isset($_SESSION['id'])){
   <meta charset="utf-8" name="viewport"content="
                 width=device-width, height=device-height,
                 initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
-  <title>Sistema Shifra</title>
+  <title>AloeHomeSpa</title>
   
   <!-- <link rel="stylesheet" href="./views/css/bootstrap.min.css"> -->
   <link href="./views/css/bootstrap-select.min.css" rel="stylesheet"/>
@@ -147,9 +145,9 @@ if(isset($_SESSION['id'])){
     <!-- Logo -->
     <a href="index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>SS</span>
+      <span class="logo-mini"><b>A</b>HS</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>ShifraSpa</span>
+      <span class="logo-lg"><b>ALOE</b>HOMESPA</span>
     </a>
 
     <!-- Header Navbar -->
@@ -270,7 +268,7 @@ if(isset($_SESSION['id'])){
             ?>
               <h3><a href="<?php echo $ruta_universal.'index.php';?>" >
                 <span class="glyphicon glyphicon-credit-card" style="color: rgb(162,131,86,1); top: 5px;" title="Página Web"></span>
-              </a>SHIFRA SPA</h3>
+              </a>ALOE HOME SPA</h3>
            <!--  <hr> -->
             <?php
             $class_mensaje = "";
@@ -331,7 +329,7 @@ if(isset($_SESSION['id'])){
       Todos los derechos reservados
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2018 <a href="#">Shifra Spa</a> | </strong>
+    <strong>Copyright &copy; 2020 AloeHomeSpa| by <a href="https://creactivmedia.com.mx">CreActiv Media</a></strong>
 
   </footer>
 

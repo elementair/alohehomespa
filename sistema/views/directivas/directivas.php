@@ -674,7 +674,7 @@ public function upload_file($cols=12, $campo=false, $ln=false){
         $campo_capitalize = $this->genera_texto_etiqueta($campo);
 
         $html = "<div class='form-group col-md-$cols'>";
-        $html = $html."<label>$campo_capitalize:</label>";
+        $html = $html."<label>$campo_capitalize: hola</label>";
         $html = $html."<div class='col-md-12 contenedor_registros'>";
 
         $html = $html.$this->registro_lista($tablas,$campos_llenables,$arreglo,

@@ -183,9 +183,9 @@ class consultas_base{
             'descripcion'=>array('tipo'=>'textarea','cols'=>12,'requerido'=>'required',
                 'vista'=>array('alta','modifica')),
             'caracteristicas'=>array('tipo'=>'textarea', 'cols'=>12, 'vista'=>array('alta','modifica')),
-            'subgrupo_servicios_id'=>array(
+            'grupo_servicios_id'=>array(
                 'tipo'=>'select','cols'=>6,'requerido'=>'required',
-                'tabla_foranea'=>'subgrupo_servicios','vista'=>array('alta','modifica')),
+                'tabla_foranea'=>'grupo_servicios','vista'=>array('alta','modifica')),
             'archivo'=>array('tipo'=>'archivo','cols'=>6,'requerido'=>'required',
                 'vista'=>array('alta','modifica')),
             'duracion'=>array('tipo'=>'text','cols'=>6,'vista'=>array('alta','modifica')),
