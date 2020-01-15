@@ -1,0 +1,29 @@
+*Hosting
+	- HOSTING MEXICO- 
+	
+		https://www.hosting-mexico.net/clientes/clientarea.php
+        	Usuario: cesarbuenrostrogomez@gmail.com
+        	Contraseña: Cesar2811*!
+
+*WordPress
+	- SITIO WEB -
+
+		Usuario: AloeGestorweb
+        	Contraseña: aloeCesar2811*!
+Cpanel
+	alohecitas
+	aloe#2020-home?spa
+
+
+config
+
+	-LOCAL-
+		BD name: aloehome_demo
+		BD user: aloehome_usdemo
+		BD pass: aloe#ome$pa2020
+		
+		
+
+
+
+
