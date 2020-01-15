@@ -52,9 +52,19 @@
                   <a id="nosotros" href="index.php?pagina=servicios" >SERVICIOS</a>
                
                     <div class="submenu dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
+                        <?php
+                                foreach ($grupo_servicios as $grupo_servicio) {
+                                    $nombre =$grupo_servicio['nombre'];
+                                    $id = $grupo_servicio['id'];
+                                    ?>
+                                    <a class="dropdown-item" href="index?pagina=servicios&grupo_servicios_id=<?php echo $id; ?>"><?php echo $nombre; ?></a>
+                                    
+                                    <?php
+                                }
+                                ?>
+<!--                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Something else here</a> -->
                     </div>
 
                  </li>

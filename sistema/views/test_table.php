@@ -1,4 +1,5 @@
  <table class="table">
+
     <thead>
       <tr>
         <th>Firstname</th>
@@ -6,7 +7,9 @@
         <th>Email</th>
       </tr>
     </thead>
+
     <tbody>
+
       <tr>
         <td>John</td>
         <td>Doe</td>
@@ -22,6 +25,9 @@
         <td>Dooley</td>
         <td>july@example.com</td>
       </tr>
+      
+
+
     </tbody>
   </table>
 </div>

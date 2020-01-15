@@ -36,23 +36,28 @@
 
 /* Menu item*/
 #sidebar-container .list-group a {
-    height: 50px;
-    color: white;
+  color: #8e8c8a !important;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 10px 4px !important;
 }
-
+#sidebar-container .list-group a:hover {
+  padding: 10px 8px !important;
+  color: #7fca00 !important;
+  font-size: 12px;
+}
 /* Submenu item*/
 #sidebar-container .list-group .sidebar-submenu a {
-    height: 45px;
-    padding-left: 30px;
+  height: 45px;
+  padding-left: 30px;
 }
 .sidebar-submenu {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
-
 /* Separators */
 .sidebar-separator-title {
-    background-color: #eaeaea;
-    height: 35px;
+  background-color: #eaeaea;
+  height: 35px;
 }
 .sidebar-separator {
     background-color: #ccc;
@@ -62,7 +67,6 @@
     background-color: #ffff;    
     height: 60px;
 }
-
 /* Closed submenu icon */
 #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
   content: " \f0d7";

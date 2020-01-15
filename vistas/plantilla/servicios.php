@@ -48,26 +48,44 @@
 		                <small>CATEGORIAS</small>
 		            </li>
 
-		            <!-- /END Separator -->
-		            <!-- Menu with submenu -->
-		            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-white text-dark list-group-item list-group-item-action flex-column align-items-start">
+		            <a href="index?pagina=servicios&grupo_servicios_id=0"  aria-expanded="false" class="bg-white text-dark list-group-item list-group-item-action flex-column align-items-start">
 		                <div class="d-flex w-100 justify-content-start align-items-center">
-		                    <span class="fa fa-dashboard fa-fw mr-3"></span>
-		                    <span class="menu-collapsed">DEPILACIÓN</span>
-		                    <span class="submenu-icon ml-auto"></span>
+		                   
+		                    <!-- <span class="menu-collapsed"> -->
+		                    	&nbsp;&nbsp;TODOS
+		                    		
+		                    	<!-- </span> -->
+		                   
 		                </div>
 		            </a>
 
-		            <!-- Submenu content -->
-		            <div id='submenu1' class="collapse sidebar-submenu">
-		                <a href="#" class="list-group-item list-group-item-action bg-white text-dark">
-		                    <span class="menu-collapsed">Hombre</span>
-		                </a>
-		                <a href="#" class="list-group-item list-group-item-action bg-white text-dark">
-		                    <span class="menu-collapsed">Mujer</span>
-		                </a>
-		            </div>
+		            <?php
+		                foreach ($grupo_servicios as $grupo_servicio) {
+		                    $nombre =$grupo_servicio['nombre'];
+		                    $imagen = $grupo_servicio['archivo'];
+		                    $id = $grupo_servicio['id'];
+		            ?>
+		   
+					
+ 					<a href="index?pagina=servicios&grupo_servicios_id=<?php echo $id; ?>"  aria-expanded="false" class="bg-white text-dark list-group-item list-group-item-action flex-column align-items-start">
+		                <!-- <div class="d-flex w-100 justify-content-start align-items-center"> -->
+		                   
+		                    <!-- <span class="menu-collapsed"> -->
+		                    	<?php echo '&nbsp;&nbsp;'.$nombre; ?>
+		                    		
+		                    	<!-- </span> -->
+		                   
+		                <!-- </div> -->
+		            </a>
+		               
 
+		          
+
+		    		<?php
+		    			}
+		    		?>
+
+		          
 
 		            <!-- Separator with title -->
 		            <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
@@ -86,22 +104,60 @@
 		    </div><!-- sidebar-container END -->
 		    <!-- MAIN -->
 		    <div class="col p-4 servicio_contenedor">
-		        <h1 class="display-4">Depilación </h1>
 
+		        <?php
+                    foreach ($grupo_servicios as $grupo){
+
+                    $nombre_grupo = $grupo['nombre'];
+                    $grupo_id = $grupo['id'];
+                    if ($grupo_id == $_GET['grupo_servicios_id']){
+                    	
+	                ?>
+		                <div class="subgrupos" style="color: #8e8c8a; ">
+		                	<h3><?php echo $nombre_grupo; ?></h3>                 
+		                </div>
+		                <hr>
+
+	                <?php 
+	 					}
+	 				
+	                }
+                ?>
+
+			    <?php
+
+				    foreach ($servicios as $servicio) {
+				    $id_servicio          = $servicio['id'];
+				    $nombre               = $servicio['nombre_servicio'];
+					$archivo              = $servicio['archivo'];
+					$descripcion          = $servicio['descripcion'];
+					$descripcion_res      = str_replace(".", ".<br>", $descripcion);
+                    $caracteristicas      = $servicio['caracteristicas'];
+					$duracion             = $servicio['duracion'];
+					$precio               = $servicio['precio'];
+                    $nombre_grupo         = $servicio['nombre_grupo'];
+                    $grupo_id         	  = $servicio['grupo_servicios_id'];
+			    ?>
 		        <div class="card">
-		            <h5 class="card-header font-weight-bold">Depilación definitiva Mujer</h5>
+		           
+
+		             <a href="index?pagina=servicios_detalle&servicio_id=<?php echo $id_servicio; ?>&grupo_servicio_id=<?php echo $grupo_id; ?>">
+		             	 <h5 class="card-header font-weight-bold"><?php echo $nombre; ?></h5>
+		             </a>
+
 		            <div class="card-body">
 		            	<div class="row">
+
 			            	<div class="col-sm-3 ">
-			            		<div class="img_producto"  style="background-image: url(vistas/img/servicios/banner1.jpg);">
-			            			
-			            		</div>
-			            					            		
+			            		<a href="index?pagina=servicios_detalle&servicio_id=<?php echo $id_servicio; ?>&grupo_servicio_id=<?php echo $grupo_id; ?>">
+			            			<img class="img_producto"  src="<?php echo $ruta_base.$archivo; ?>"></img>
+			            		</a>     					            		
 			            	</div>
+
 			            	<div class="col-sm-9">
 			            		<h6 class="text-green-aloe">Descripción</h6>
 				            		<p>
-				            			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat est ratione id, molestias, corporis deleniti nisi totam necessitatibus porro magni!
+				            			<?php echo $descripcion; ?>
 				            		</p>
 				                <div class="table_details table-responsive">
 								    <table class="table">
@@ -114,10 +170,10 @@
 								        </thead>
 								        <tbody>
 								            <tr>
-								                <td><h3>$1500</h3></td>								            
-								                <td><h3>20min</h3></td>
+								                <td><h4><?php echo "$".$precio; ?></h4></td>								            
+								                <td><h4><?php echo $duracion."min"; ?></h4></td>
 								                <td><div class="d-flex justify-content-center">
-			        								<a href="index.php?pagina=servicios_detalle" class="btn-green-aloe">Ver detalles</a>
+			        								<a href="index?pagina=servicios_detalle&servicio_id=<?php echo $id_servicio; ?>&grupo_servicio_id=<?php echo $grupo_id; ?>" class="btn-green-aloe">Ver detalles</a>
 												</div></td>							               
 								            </tr>
 								            
@@ -130,8 +186,14 @@
 		                
 		            </div>
 		        </div>
+		        <br>
 
-				<br>
+				 <?php
+                    
+
+                    
+                }
+                ?>
 		       
 
 

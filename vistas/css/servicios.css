@@ -25,6 +25,10 @@
 	border-radius: 50%;
 
 }
+.servicio_contenedor{
+    padding-top: 0rem !important;
+}
+
 .servicio_contenedor .table_details .table {
     width: 100%;
     margin-bottom: 0rem !important;

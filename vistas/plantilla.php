@@ -1,5 +1,50 @@
 <?php
 // php consultas
+session_start();
+require_once ('./config/consulta.php');
+require_once "./config/ruta.php";
+$datos = new consulta();
+$conexion = new Conexion();
+$conexion->selecciona_base_datos();
+$link = $conexion->link;
+$mensaje = False;
+$m_error="";
+$ruta_base_menu='';
+
+$usuario_session='usuario_session';
+$usuario='usuario';
+$res_nombre='';
+$res_email='';
+$res_phone='';
+
+$MJEerror='';
+
+$etiqueta="INICIAR";
+$SesionModal="#Modal_formulario_login";
+$img_inicio_ruta="img/svg/icono_ingresar.svg";
+$ruta_base=$ruta_universal.'sistema/';
+/*
+* 
+**************************************
+*
+Control session
+*
+**************************************
+*
+*/
+require_once ('./config/controlSession.php');
+
+$grupo_servicios=mysqli_query($link,"SELECT id, nombre, descripcion, archivo FROM grupo_servicios WHERE status=1;");
+$promociones = mysqli_query($link, "SELECT id,nombre,descripcion,archivo, descuento,promociones_tipo_id,status FROM promociones WHERE status=1");
+
+$slider_inicio=mysqli_query($link,"SELECT id, nombre, descripcion, boton, url, archivo FROM slider_inicio WHERE status=1;");
+$video_inicio=mysqli_query($link,"SELECT archivo FROM video_inicio;");
+
+$nosotros=mysqli_query($link,"SELECT id, descripcion FROM nosotros WHERE id=1;");
+$slider_nosotros=mysqli_query($link,"SELECT id, nombre, descripcion, prefijo FROM slider_nosotros WHERE status=1;");
+$instalaciones=mysqli_query($link,"SELECT id, nombre, archivo FROM instalaciones WHERE status=1;");
+$ajustes=mysqli_query($link,"SELECT id, telefono_1, telefono_2, whatsapp, email_contacto FROM ajustes;");
+
 ?>
 <!DOCTYPE html>
 <html lang="es-Mx">
@@ -52,17 +97,143 @@ if(isset($_GET["pagina"])){
     $rutas = explode("/", $_GET["pagina"]);
     // Mi perfil
     if ($rutas[0] == "servicios") { 
+        /*==============================================================
+        CONSULTAS PARA SERVICIOS
+        ==============================================================*/
+        $grupo_servicios=mysqli_query($link,"SELECT id, nombre, descripcion, archivo FROM grupo_servicios WHERE status=1;");
+        // $ajustes=mysqli_query($link,"SELECT id, telefono_1, telefono_2, whatsapp, email_contacto FROM ajustes;");
+        if (isset($_GET['grupo_servicios_id'])) {
+
+          $datosgrupo=$_GET['grupo_servicios_id'];
+
+          if ($datosgrupo==0){
+            $servicios = mysqli_query($link, "SELECT  s.id, 
+                                                      s.nombre AS 'nombre_servicio', 
+                                                      s.descripcion, 
+                                                      s.caracteristicas, 
+                                                      s.archivo, 
+                                                      s.duracion, 
+                                                      s.precio, 
+                                                      s.status, 
+                                                      s.grupo_servicios_id, 
+                                                      gs.nombre AS 'nombre_grupo', 
+                                                      gs.id 
+                                                from(servicios as s 
+                                                left outer join grupo_servicios as gs on 
+                                                      s.grupo_servicios_id=gs.id) 
+                                                WHERE s.status=1;");
+          }else{
+            $servicios = mysqli_query($link, "SELECT  s.id, 
+                                                      s.nombre AS 'nombre_servicio', 
+                                                      s.descripcion, 
+                                                      s.caracteristicas, 
+                                                      s.archivo, 
+                                                      s.duracion, 
+                                                      s.precio, 
+                                                      s.status, 
+                                                      s.grupo_servicios_id, 
+                                                      gs.nombre AS 'nombre_grupo', 
+                                                      gs.id 
+                                                from(servicios as s 
+                                                left outer join grupo_servicios as gs on 
+                                                      s.grupo_servicios_id=gs.id) 
+                                                WHERE gs.id=$datosgrupo AND s.status=1;");
+          }
+
+        }else{
+          $servicios = mysqli_query($link, "SELECT  s.id, 
+                                                    s.nombre AS 'nombre_servicio', 
+                                                    s.descripcion, 
+                                                    s.caracteristicas, 
+                                                    s.archivo, 
+                                                    s.duracion, 
+                                                    s.precio, 
+                                                    s.status, 
+                                                    s.grupo_servicios_id, 
+                                                    gs.nombre AS 'nombre_grupo', 
+                                                    gs.id 
+                                                from(servicios as s 
+                                                left outer join grupo_servicios as gs on 
+                                                      s.grupo_servicios_id=gs.id) 
+                                                WHERE s.status=1;");
+        }
+
+        // include_once $base."servicios.php";
+        // include "views/modulos/modulo_cita_individual.php";
         ?>
             <link rel="stylesheet" type="text/css" href="vistas/css/servicios.css">
             <link rel="stylesheet" type="text/css" href="vistas/css/sidebar.css">
             <link rel="stylesheet" href="vistas/css/servicios.css">
-
             <script src="vistas/js/sidebar.js"></script>
 
         <?php
         include_once $base."plantilla/servicios.php";
     }   
     if ($rutas[0] == "servicios_detalle") {
+
+
+        /*==============================================================
+        CONSULTAS PARA SERVICIOS
+        ==============================================================*/
+        $grupo_servicios=mysqli_query($link,"SELECT id, nombre, descripcion, archivo FROM grupo_servicios WHERE status=1;");
+        // $ajustes=mysqli_query($link,"SELECT id, telefono_1, telefono_2, whatsapp, email_contacto FROM ajustes;");
+        if (isset($_GET['servicio_id'])) {
+
+        $datoservicio=$_GET['servicio_id'];
+
+        if ($datoservicio==0){
+
+            $servicios = mysqli_query($link, "SELECT  s.id, 
+                                                      s.nombre AS 'nombre_servicio', 
+                                                      s.descripcion, 
+                                                      s.caracteristicas, 
+                                                      s.archivo, 
+                                                      s.duracion, 
+                                                      s.precio, 
+                                                      s.status, 
+                                                      s.grupo_servicios_id, 
+                                                      gs.nombre AS 'nombre_grupo', 
+                                                      gs.id 
+                                                from(servicios as s 
+                                                left outer join grupo_servicios as gs on 
+                                                      s.grupo_servicios_id=gs.id) 
+                                                WHERE s.status=1;");
+          }else{
+            $servicios = mysqli_query($link, "SELECT  s.id, 
+                                                      s.nombre AS 'nombre_servicio', 
+                                                      s.descripcion, 
+                                                      s.caracteristicas, 
+                                                      s.archivo, 
+                                                      s.duracion, 
+                                                      s.precio, 
+                                                      s.status, 
+                                                      s.grupo_servicios_id, 
+                                                      gs.nombre AS 'nombre_grupo', 
+                                                      gs.id 
+                                                from(servicios as s 
+                                                left outer join grupo_servicios as gs on 
+                                                      s.grupo_servicios_id=gs.id) 
+                                                WHERE s.id=<1datoservicio></1datoservicio> AND s.status=1;");
+          }
+
+        }else{
+          $servicios = mysqli_query($link, "SELECT  s.id, 
+                                                    s.nombre AS 'nombre_servicio', 
+                                                    s.descripcion, 
+                                                    s.caracteristicas, 
+                                                    s.archivo, 
+                                                    s.duracion, 
+                                                    s.precio, 
+                                                    s.status, 
+                                                    s.grupo_servicios_id, 
+                                                    gs.nombre AS 'nombre_grupo', 
+                                                    gs.id 
+                                                from(servicios as s 
+                                                left outer join grupo_servicios as gs on 
+                                                      s.grupo_servicios_id=gs.id) 
+                                                WHERE s.status=1;");
+        }
+
     ?>
         <link rel="stylesheet" type="text/css" href="vistas/css/servicios.css">
         <link rel="stylesheet" type="text/css" href="vistas/css/sidebar.css">
@@ -106,35 +277,35 @@ if(isset($_GET["pagina"])){
     <?php
     include_once $base."plantilla/servicios_detalle.php";
     }
-    elseif ($rutas[0] == "sucursales") {
+    if ($rutas[0] == "sucursales") {
         ?>
             <link rel="stylesheet" type="text/css" href="vistas/css/sucursales.css">
         <?php
         include_once $base."plantilla/sucursales.php";
     }
-    elseif ($rutas[0] == "productos") {
+    if ($rutas[0] == "productos") {
         ?>
              <link rel="stylesheet" type="text/css" href="vistas/css/productos.css">
         <?php
         include_once $base."plantilla/productos.php";
     }
-     elseif ($rutas[0] == "inversionistas") {
+    if ($rutas[0] == "inversionistas") {
         ?>
              <link rel="stylesheet" type="text/css" href="vistas/css/inversionistas.css">
         <?php
         include_once $base."plantilla/inversionistas.php";
         
     }
-    elseif ($rutas[0] == "citas") {
+    if ($rutas[0] == "citas") {
         ?>
              <link rel="stylesheet" type="text/css" href="vistas/css/citas.css">
         <?php
         include_once $base."plantilla/citas.php";
         
     }
-    else{
-       include_once $base."plantilla/error.php";
-    }
+    // else{
+    //    include_once $base."plantilla/error.php";
+    // }
 }else{
     ?>
      <link rel="stylesheet" type="text/css" href="vistas/css/inicio.css">

@@ -1,13 +1,36 @@
-<div class="container">
 
+
+<div class="container">
+	 <?php
+
+	    foreach ($servicios as $servicio) {
+	        $id_servicio          = $servicio['id'];
+	        $nombre               = $servicio['nombre_servicio'];
+	        $archivo_pad          = $servicio['archivo'];
+	        $descripcion          = $servicio['descripcion'];
+	    	$descripcion_res      = str_replace(".", ".<br>", $descripcion);
+	    	$caracteristicas      = $servicio['caracteristicas'];
+	        $duracion             = $servicio['duracion'];
+	        $precio               = $servicio['precio'];
+	    	$precio_formato_comas = number_format($precio);	  
+	    	$nombre_grupo         = $servicio['nombre_grupo'];
+	    	$grupo_servicio_id    =$servicio['grupo_servicios_id'];
+			?>
 	<div class="row space_header">
 		<div class="col-12 col-sm">
 	      	<nav aria-label="breadcrumb">
 			  	<ol class="breadcrumb">
-				    <li class="breadcrumb-item"><a href="#">Home</a></li>
-				    <li class="breadcrumb-item"><a href="#">Depilación</a></li>
-				    <li class="breadcrumb-item active" aria-current="page">Mujer</li>
+				    <li class="breadcrumb-item"><a href="index">Home</a></li>
+				    <li class="breadcrumb-item">
+				    	<a href="index?pagina=servicios&grupo_servicios_id= <?php echo $grupo_servicio_id; ?>">
+				    		<?php echo $nombre_grupo; ?>	    		
+				    	</a>
+				    </li>
+				    <li class="breadcrumb-item active" aria-current="page"><?php echo $nombre; ?></li>
 			 	 </ol>
+
+
+			 	
 			</nav>
 		</div>
 	</div>
@@ -222,5 +245,9 @@
         </ul>  
 	</div>
 	<br/>
+
+	<?php
+}
+	?>
 
 </div>
