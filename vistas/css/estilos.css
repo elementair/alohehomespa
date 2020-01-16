@@ -62,11 +62,41 @@ section{
 .text-green-aloe{
     color: #7fca00 ;
 }
+.subtitulo{
+    font-size: 40px;
+    display: inline-block;
+    text-align: center;
+}
 
 .line{
     margin-top: 50px;
     width: 100px;
     position: relative;
+}
+
+.txt_verde{
+    color: #a8d162;
+    font-family: 'nexabold';
+}
+
+.txt_azul{
+    color: #3bc3f2;
+    font-family: 'nexabold';
+}
+
+.txt_aloe{
+    color: #a8d162;
+    font-family: 'beyondthemountains';
+}
+
+.txt_italica{
+    font-size: 25px;
+}
+
+.txt_sin_espacio{
+    margin-bottom: -20px;
+    position: relative;
+    display: block;
 }
 .space_header{
     display: inline-block;

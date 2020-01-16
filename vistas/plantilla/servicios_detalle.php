@@ -1,10 +1,7 @@
-
-
 <div class="container">
 	 <?php
-
 	    foreach ($servicios as $servicio) {
-	        $id_servicio          = $servicio['id'];
+	        $id_servicio          = $servicio['servicio_id'];
 	        $nombre               = $servicio['nombre_servicio'];
 	        $archivo_pad          = $servicio['archivo'];
 	        $descripcion          = $servicio['descripcion'];
@@ -14,13 +11,14 @@
 	        $precio               = $servicio['precio'];
 	    	$precio_formato_comas = number_format($precio);	  
 	    	$nombre_grupo         = $servicio['nombre_grupo'];
-	    	$grupo_servicio_id    =$servicio['grupo_servicios_id'];
+			$grupo_servicio_id    =$servicio['grupo_id'];
+		
 			?>
 	<div class="row space_header">
 		<div class="col-12 col-sm">
 	      	<nav aria-label="breadcrumb">
 			  	<ol class="breadcrumb">
-				    <li class="breadcrumb-item"><a href="index">Home</a></li>
+				    <li class="breadcrumb-item"><a href="index">HOME</a></li>
 				    <li class="breadcrumb-item">
 				    	<a href="index?pagina=servicios&grupo_servicios_id= <?php echo $grupo_servicio_id; ?>">
 				    		<?php echo $nombre_grupo; ?>	    		
@@ -34,6 +32,7 @@
 			</nav>
 		</div>
 	</div>
+	
 
 	<div class="row ">
 		<div class="col-sm p_detalle_imagen">
@@ -91,11 +90,16 @@
 		</div>
 		<div class="col-sm p_detalle_descriipcion">
 
-			<h3>Depilacion definitiva mujer</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus voluptas atque, omnis non alias porro esse at magnam ab. Ad repellat hic expedita amet quasi numquam possimus sunt, maiores quaerat!</p>
+			<h3><?php echo $nombre;?></h3>
+			<p><?php
+			$cadena1=$caracteristicas;
+			$resultado1 = str_replace("+", "<br/>-", $cadena1);
+
+			echo $resultado1;
+			?></p>
 			<br>
-			<h5><span class="text-green-aloe">Duracion:</span><strong> 50min </strong></h5>
-			<h5><span class="text-green-aloe">Precio:</span><strong> $1499</strong></h5>
+			<h5><span class="text-green-aloe">Duracion:</span><strong><?php echo $duracion."min";?> </strong></h5>
+			<h5><span class="text-green-aloe">Precio:</span><strong><?php echo "$".$precio;?></strong></h5>
 			<br>
 			<a class="btn-green-aloe" href="#">Agendar</a>
 			<hr>
@@ -139,16 +143,7 @@
 		            <!-- Note: New place of `data-parent` -->
 		            <div id="collapse-A" class="collapse show" data-parent="#content" role="tabpanel" aria-labelledby="heading-A">
 		                <div class="card-body">
-		                    <ol>
-		                    	<li>item1</li>
-		                    	<li>item1</li>
-		                    	<li>item1</li>
-		                    	<li>item1</li>
-		                    	<li>item1</li>
-		                    	<li>item1</li>
-		                    	<li>item1</li>
-		                    	<li>item1</li>
-		                    </ol>
+		                   <?php echo $caracteristicas; ?>
 		                </div>
 		            </div>
 		        </div>
@@ -171,83 +166,74 @@
 		    </div>
 		</div>
 	</div>
-	
+	<?php
+	}
+	?>
 	<div class="row">
 
 		<div class="row subtitulo">
-            <span class="txt_verde">Servicios</span> 
-            <span class="txt_azul"> Relacionados que te pueden</span> 
-            <span class="txt_aloe">interesar</span>
+            <span class="text-green-aloe">Servicios</span> 
+            <span class="txt_azul"> Relacionados en </span><br>
+            <span class="txt_sin_espacio"><?php echo $nombre_grupo ;?></span>
         </div>
-
 	 	<ul id="flexiselDemo3">
+
+
+			<?php
+			if (isset($_GET['grupo_servicio_id'])) {
+
+			$datosgrupoervicio=$_GET['grupo_servicio_id'];
+
+			foreach ($relacionados as $servicio) {
+				$id_servicio          = $servicio['servicio_id'];
+				$nombre               = $servicio['nombre_servicio'];
+				$archivo_pad          = $servicio['archivo'];
+				$descripcion          = $servicio['descripcion'];
+				$descripcion_res      = str_replace(".", ".<br>", $descripcion);
+				$caracteristicas      = $servicio['caracteristicas'];
+				$duracion             = $servicio['duracion'];
+				$precio               = $servicio['precio'];
+				$precio_formato_comas = number_format($precio);	  
+				$nombre_grupo         = $servicio['nombre_grupo'];
+				$grupo_servicio_id    =$servicio['grupo_id'];
+
+				if($grupo_servicio_id == $datosgrupoervicio ){
+
+			?>
+
             <li> 
             	<div class="card">
-		            <h5 class="card-header font-weight-bold">Depilación definitiva Mujer</h5>
+		            <h5 class="card-header font-weight-bold"><?php echo $nombre;?></h5>
 		            <div class="card-body">
 		            	<div class="row">
 			            	<div class="col-sm-6">
-			            		<div class="img_producto"  style="background-image: url(vistas/img/servicios/banner1.jpg);">
-			            			
-			            		</div>			            		
+							<a href="index?pagina=servicios_detalle&servicio_id=<?php echo $id_servicio; ?>&grupo_servicio_id=<?php echo $grupo_servicio_id; ?>">
+								<img class="img_producto"  src="<?php echo $ruta_base.$archivo_pad;?>"></img>         					
+							</a>	            		
 
 			            	</div>
 			            	<div class="col-sm-6">			            	       		   
-				               	<h6><span class="text-green-aloe" >Duración</span>20min</h6>
-				                <h6><span class="text-green-aloe" >Precio</span>$1500</h6>
+				               	<h6><span class="text-green-aloe" >Duración</span><?php echo $duracion."min";?></h6>
+				                <h6><span class="text-green-aloe" >Precio</span><?php echo "$".$precio;?></h6>
 				                <h6><a href="#" class="btn-green-aloe">Ver detalles</a></h6>
 			            	</div>
 			            </div>		                
 		            </div>
 		        </div>
 		    </li>
+			<?php 
+					
+				}
+			}
+		}
+			?>
 
-            <li>
-            	<div class="card">
-		            <h5 class="card-header font-weight-bold">Depilación definitiva Mujer</h5>
-		            <div class="card-body">
-		            	<div class="row">
-			            	<div class="col-sm-6">
-			            		<div class="img_producto"  style="background-image: url(vistas/img/servicios/banner1.jpg);">
-			            			
-			            		</div>			            		
-
-			            	</div>
-			            	<div class="col-sm-6">			            	       		   
-				               	<h6><span class="text-green-aloe" >Duración</span>20min</h6>
-				                <h6><span class="text-green-aloe" >Precio</span>$1500</h6>
-				                <h6><a href="#" class="btn-green-aloe">Ver detalles</a></h6>
-			            	</div>
-			            </div>		                
-		            </div>
-		        </div>
-            </li>
-            <li> 
-            	<div class="card">
-		            <h5 class="card-header font-weight-bold">Depilación definitiva Mujer</h5>
-		            <div class="card-body">
-		            	<div class="row">
-			            	<div class="col-sm-6">
-			            		<div class="img_producto"  style="background-image: url(vistas/img/servicios/banner1.jpg);">
-			            			
-			            		</div>			            		
-
-			            	</div>
-			            	<div class="col-sm-6">			            	       		   
-				               	<h6><span class="text-green-aloe" >Duración</span>20min</h6>
-				                <h6><span class="text-green-aloe" >Precio</span>$1500</h6>
-				                <h6><a href="#" class="btn-green-aloe">Ver detalles</a></h6>
-			            	</div>
-			            </div>		                
-		            </div>
-		        </div>
-		    </li>                               
+                                        
         </ul>  
 	</div>
 	<br/>
+	
 
-	<?php
-}
-	?>
+
 
 </div>

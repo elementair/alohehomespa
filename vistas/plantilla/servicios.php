@@ -13,8 +13,8 @@
 		<div class="col-12 col-sm">
 	      	<nav aria-label="breadcrumb">
 			  	<ol class="breadcrumb">
-				    <li class="breadcrumb-item">Home</li>
-				    <li class="breadcrumb-item">servicios</li>
+				    <li class="breadcrumb-item">HOME</li>
+				    <li class="breadcrumb-item">SERVICIOS</li>
 				    <li class="breadcrumb-item"><a href="#">Depilación</a></li>
 				    <li class="breadcrumb-item active" aria-current="page">Mujer</li>
 			 	 </ol>
@@ -77,15 +77,9 @@
 		                   
 		                <!-- </div> -->
 		            </a>
-		               
-
-		          
-
 		    		<?php
 		    			}
 		    		?>
-
-		          
 
 		            <!-- Separator with title -->
 		            <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
@@ -106,28 +100,53 @@
 		    <div class="col p-4 servicio_contenedor">
 
 		        <?php
-                    foreach ($grupo_servicios as $grupo){
+					// Si no existe un id de grupo de servicio
+					if(!isset($_GET['grupo_servicios_id'])){
+						?>
+								<div class="subgrupos" style="color: #8e8c8a; ">
+									<h3>TODOS</h3>                 
+								</div>
+								<hr>
+		
+							<?php 
+					}else{
 
-                    $nombre_grupo = $grupo['nombre'];
-                    $grupo_id = $grupo['id'];
-                    if ($grupo_id == $_GET['grupo_servicios_id']){
-                    	
-	                ?>
-		                <div class="subgrupos" style="color: #8e8c8a; ">
-		                	<h3><?php echo $nombre_grupo; ?></h3>                 
-		                </div>
-		                <hr>
+						foreach ($grupo_servicios as $grupo){
 
-	                <?php 
-	 					}
-	 				
-	                }
+							$nombre_grupo = $grupo['nombre'];
+							$grupo_id = $grupo['id'];
+
+							// Si existe un id de grupo de servicio y es igual a un grupo de servicio
+							if ($grupo_id == $_GET['grupo_servicios_id']){
+								
+							?>
+								<div class="subgrupos" style="color: #8e8c8a; ">
+									<h3><?php echo $nombre_grupo; ?></h3>                 
+								</div>
+								<hr>
+		
+							<?php 
+								 }
+							}
+							// Si el id de grupo de servicio es igual a 0 pintar TODOS
+							if($_GET['grupo_servicios_id']==0){
+								?>
+								<div class="subgrupos" style="color: #8e8c8a; ">
+									<h3>TODOS</h3>                 
+								</div>
+								<hr>
+							<?php
+								
+							}
+						
+					}
+                    
                 ?>
 
 			    <?php
 
 				    foreach ($servicios as $servicio) {
-				    $id_servicio          = $servicio['id'];
+				    $id_servicio          = $servicio['servicio_id'];
 				    $nombre               = $servicio['nombre_servicio'];
 					$archivo              = $servicio['archivo'];
 					$descripcion          = $servicio['descripcion'];
@@ -136,7 +155,11 @@
 					$duracion             = $servicio['duracion'];
 					$precio               = $servicio['precio'];
                     $nombre_grupo         = $servicio['nombre_grupo'];
-                    $grupo_id         	  = $servicio['grupo_servicios_id'];
+					$grupo_id         	  = $servicio['grupo_id'];
+
+					// if ($_GET['grupo_servicios_id']==$grupo_id){
+
+					
 			    ?>
 		        <div class="card">
 		           
@@ -191,8 +214,8 @@
 				 <?php
                     
 
-                    
-                }
+				}
+                // }
                 ?>
 		       
 

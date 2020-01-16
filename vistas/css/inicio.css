@@ -51,32 +51,6 @@ No media query for `xs` since this is the default in Bootstrap */
     background-size: 100%;
 }
 
-
-.txt_verde{
-    color: #a8d162;
-    font-family: 'nexabold';
-}
-
-.txt_azul{
-    color: #3bc3f2;
-    font-family: 'nexabold';
-}
-
-.txt_aloe{
-    color: #a8d162;
-    font-family: 'beyondthemountains';
-}
-
-.txt_italica{
-    font-size: 25px;
-}
-
-.txt_sin_espacio{
-    margin-bottom: -20px;
-    position: relative;
-    display: block;
-}
-
 .section-paquetes{
     position: relative;
     width: 100%; 
@@ -88,7 +62,6 @@ No media query for `xs` since this is the default in Bootstrap */
 }
 
 .paquetes_pc{
-    
 
 }
 .paquetes_movil{
@@ -127,11 +100,7 @@ No media query for `xs` since this is the default in Bootstrap */
     width: 100%;    
 }
 
-.subtitulo{
-    font-size: 40px;
-    display: inline-block;
-    text-align: center;
-}
+
 
 .seccion_nosotros{
     display: inline-block;

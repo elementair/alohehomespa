@@ -1,0 +1,47 @@
+.contacto_sucursal{
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    border-radius: 10px;
+}
+.mapa{
+    /* border-radius: 10px; */
+    /* border: 1px solid #eaeaea; */
+    padding: 10px;
+}
+.direccion{
+    padding: 10px;
+}
+.opciones_sucursales{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.opciones_sucursales ul li{
+    list-style: none;
+    display: inline;
+
+}
+.opciones_sucursales a{
+    text-decoration:none;
+    padding:10px;
+    margin: 4px 10px ;
+    background-color: #eaeaea50;
+    border-radius: 20px;
+    font-size: 18px;
+    
+    box-shadow: 2px 2px 4px #eaeaea;
+    color: rgb(37, 37, 37);
+}
+.redes_sucursales img{
+    height: 30px;
+    padding: 5px 1px;
+    /* width: 30px; */
+    
+}
+.redes_sucursales a{
+
+    text-decoration: none;
+    color: #6e6e6e;
+
+    font-size: 16px;
+}

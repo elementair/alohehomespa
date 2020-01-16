@@ -95,19 +95,24 @@ global $rutas;
 $rutas = array();
 if(isset($_GET["pagina"])){
     $rutas = explode("/", $_GET["pagina"]);
-    // Mi perfil
+
+    // CONSULTAS PADRE
+    $grupo_servicios=mysqli_query($link,"SELECT id, nombre, descripcion, archivo FROM grupo_servicios WHERE status=1;");
+
+    
     if ($rutas[0] == "servicios") { 
+
         /*==============================================================
         CONSULTAS PARA SERVICIOS
         ==============================================================*/
-        $grupo_servicios=mysqli_query($link,"SELECT id, nombre, descripcion, archivo FROM grupo_servicios WHERE status=1;");
+        
         // $ajustes=mysqli_query($link,"SELECT id, telefono_1, telefono_2, whatsapp, email_contacto FROM ajustes;");
         if (isset($_GET['grupo_servicios_id'])) {
 
           $datosgrupo=$_GET['grupo_servicios_id'];
 
           if ($datosgrupo==0){
-            $servicios = mysqli_query($link, "SELECT  s.id, 
+            $servicios = mysqli_query($link, "SELECT  s.id AS 'servicio_id', 
                                                       s.nombre AS 'nombre_servicio', 
                                                       s.descripcion, 
                                                       s.caracteristicas, 
@@ -117,13 +122,13 @@ if(isset($_GET["pagina"])){
                                                       s.status, 
                                                       s.grupo_servicios_id, 
                                                       gs.nombre AS 'nombre_grupo', 
-                                                      gs.id 
+                                                      gs.id AS 'grupo_id'
                                                 from(servicios as s 
                                                 left outer join grupo_servicios as gs on 
                                                       s.grupo_servicios_id=gs.id) 
                                                 WHERE s.status=1;");
           }else{
-            $servicios = mysqli_query($link, "SELECT  s.id, 
+            $servicios = mysqli_query($link, "SELECT  s.id AS 'servicio_id', 
                                                       s.nombre AS 'nombre_servicio', 
                                                       s.descripcion, 
                                                       s.caracteristicas, 
@@ -133,7 +138,7 @@ if(isset($_GET["pagina"])){
                                                       s.status, 
                                                       s.grupo_servicios_id, 
                                                       gs.nombre AS 'nombre_grupo', 
-                                                      gs.id 
+                                                      gs.id AS 'grupo_id'
                                                 from(servicios as s 
                                                 left outer join grupo_servicios as gs on 
                                                       s.grupo_servicios_id=gs.id) 
@@ -141,7 +146,8 @@ if(isset($_GET["pagina"])){
           }
 
         }else{
-          $servicios = mysqli_query($link, "SELECT  s.id, 
+
+          $servicios = mysqli_query($link, "SELECT  s.id AS 'servicio_id', 
                                                     s.nombre AS 'nombre_servicio', 
                                                     s.descripcion, 
                                                     s.caracteristicas, 
@@ -151,7 +157,7 @@ if(isset($_GET["pagina"])){
                                                     s.status, 
                                                     s.grupo_servicios_id, 
                                                     gs.nombre AS 'nombre_grupo', 
-                                                    gs.id 
+                                                    gs.id AS 'grupo_id'
                                                 from(servicios as s 
                                                 left outer join grupo_servicios as gs on 
                                                       s.grupo_servicios_id=gs.id) 
@@ -183,7 +189,7 @@ if(isset($_GET["pagina"])){
 
         if ($datoservicio==0){
 
-            $servicios = mysqli_query($link, "SELECT  s.id, 
+            $servicios = mysqli_query($link, "SELECT  s.id  AS 'servicio_id', 
                                                       s.nombre AS 'nombre_servicio', 
                                                       s.descripcion, 
                                                       s.caracteristicas, 
@@ -193,13 +199,13 @@ if(isset($_GET["pagina"])){
                                                       s.status, 
                                                       s.grupo_servicios_id, 
                                                       gs.nombre AS 'nombre_grupo', 
-                                                      gs.id 
+                                                      gs.id AS 'grupo_id'
                                                 from(servicios as s 
                                                 left outer join grupo_servicios as gs on 
                                                       s.grupo_servicios_id=gs.id) 
                                                 WHERE s.status=1;");
           }else{
-            $servicios = mysqli_query($link, "SELECT  s.id, 
+            $servicios = mysqli_query($link, "SELECT  s.id  AS 'servicio_id', 
                                                       s.nombre AS 'nombre_servicio', 
                                                       s.descripcion, 
                                                       s.caracteristicas, 
@@ -209,15 +215,31 @@ if(isset($_GET["pagina"])){
                                                       s.status, 
                                                       s.grupo_servicios_id, 
                                                       gs.nombre AS 'nombre_grupo', 
-                                                      gs.id 
+                                                      gs.id AS 'grupo_id'
                                                 from(servicios as s 
                                                 left outer join grupo_servicios as gs on 
                                                       s.grupo_servicios_id=gs.id) 
-                                                WHERE s.id=<1datoservicio></1datoservicio> AND s.status=1;");
+                                                WHERE s.status=1 AND s.id=$datoservicio;");
+
+            $relacionados = mysqli_query($link, "SELECT    s.id  AS 'servicio_id', 
+                                                        s.nombre AS 'nombre_servicio', 
+                                                        s.descripcion, 
+                                                        s.caracteristicas, 
+                                                        s.archivo, 
+                                                        s.duracion, 
+                                                        s.precio, 
+                                                        s.status, 
+                                                        s.grupo_servicios_id, 
+                                                        gs.nombre AS 'nombre_grupo', 
+                                                        gs.id AS 'grupo_id'
+                                                from(servicios as s 
+                                                left outer join grupo_servicios as gs on 
+                                                        s.grupo_servicios_id=gs.id) 
+                                                WHERE s.status=1;");
           }
 
         }else{
-          $servicios = mysqli_query($link, "SELECT  s.id, 
+          $servicios = mysqli_query($link, "SELECT  s.id  AS 'servicio_id', 
                                                     s.nombre AS 'nombre_servicio', 
                                                     s.descripcion, 
                                                     s.caracteristicas, 
@@ -227,7 +249,7 @@ if(isset($_GET["pagina"])){
                                                     s.status, 
                                                     s.grupo_servicios_id, 
                                                     gs.nombre AS 'nombre_grupo', 
-                                                    gs.id 
+                                                    gs.id AS 'grupo_id'
                                                 from(servicios as s 
                                                 left outer join grupo_servicios as gs on 
                                                       s.grupo_servicios_id=gs.id) 
@@ -280,8 +302,42 @@ if(isset($_GET["pagina"])){
     if ($rutas[0] == "sucursales") {
         ?>
             <link rel="stylesheet" type="text/css" href="vistas/css/sucursales.css">
+            <link rel="stylesheet" href="vistas/css/slideshow_gallery.css">
+            <script src="vistas/js/slideshow_gallery.js"></script>
+            <script>
+            
+            var slideIndex = 1;
+            showSlides(slidIndex);
+
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
         <?php
         include_once $base."plantilla/sucursales.php";
+        
     }
     if ($rutas[0] == "productos") {
         ?>
