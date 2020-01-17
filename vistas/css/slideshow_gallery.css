@@ -30,7 +30,7 @@
 .next {
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
@@ -79,8 +79,8 @@
 
 /* Six columns side by side */
 .p_detalle_imagen .column {
-  float: left;
-  width: 16.66%;
+  
+  width: 100%;
 }
 
 /* Add a transparency effect for thumnbail images */

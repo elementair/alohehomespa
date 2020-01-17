@@ -2,6 +2,7 @@
   <div class="container">
   <div class="row">
   <div class="col-12 col-sm imagen_footer">
+    
         <img src="vistas/img/logo/blanco.png" alt="">
         </div>
         <div class="col-12 col-sm datos_contacto">
@@ -63,7 +64,7 @@
       </div>
       <div class="col-0 col-sm copyrigth text_copy">
      
-        <p>© Copyright AloheHomeSpa | 2020</p>
+        <p>© Copyright AloeHomeSpa | 2020</p>
       </div>
       <div class="col-6 col-pull-6 col-sm copyrigth">
    

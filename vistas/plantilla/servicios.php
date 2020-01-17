@@ -168,7 +168,7 @@
 		             	 <h5 class="card-header font-weight-bold"><?php echo $nombre; ?></h5>
 		             </a>
 
-		            <div class="card-body">
+		            <div class="card-body quitar_padding">
 		            	<div class="row">
 
 			            	<div class="col-sm-3 ">
@@ -177,12 +177,12 @@
 			            		</a>     					            		
 			            	</div>
 
-			            	<div class="col-sm-9">
+			            	<div class="col-sm-9 ">
 			            		<h6 class="text-green-aloe">Descripción</h6>
 				            		<p>
 				            			<?php echo $descripcion; ?>
 				            		</p>
-				                <div class="table_details table-responsive">
+				                <div class="table_details table-responsive quitar_padding">
 								    <table class="table">
 								        <thead>
 								            <tr>

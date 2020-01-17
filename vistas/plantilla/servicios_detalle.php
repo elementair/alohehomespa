@@ -17,6 +17,7 @@
 	<div class="row space_header">
 		<div class="col-12 col-sm">
 	      	<nav aria-label="breadcrumb">
+				  
 			  	<ol class="breadcrumb">
 				    <li class="breadcrumb-item"><a href="index">HOME</a></li>
 				    <li class="breadcrumb-item">
@@ -25,85 +26,80 @@
 				    	</a>
 				    </li>
 				    <li class="breadcrumb-item active" aria-current="page"><?php echo $nombre; ?></li>
-			 	 </ol>
-
-
-			 	
+				  </ol>
+				  
 			</nav>
 		</div>
 	</div>
 	
 
 	<div class="row ">
-		<div class="col-sm p_detalle_imagen">
-	
+		<div class="col-sm-6 p_detalle_imagen">
 			<div class="container">
-				<div class="row">
-			  <div class="mySlides">
-			    <div class="numbertext">1 / 5</div>
-			    <img src="vistas/img/servicios/1.jpg" style="width:100%">
-			  </div>
+			<div class="row">
 
-			  <div class="mySlides">
-			    <div class="numbertext">2 / 5</div>
-			    <img src="vistas/img/servicios/2.jpg" style="width:100%">
-			  </div>
+				<div class="col-sm-2 quitar_padding">
+					<div class="column">
+					<img class="demo cursor" src="vistas/img/servicios/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Sensacciones inolvidables">
+					</div>
+					<div class="column">
+					<img class="demo cursor" src="vistas/img/servicios/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Procedimiento profecional">
+					</div>
+					<div class="column">
+					<img class="demo cursor" src="vistas/img/servicios/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Tu piel luce fantastico">
+					</div>
+					<div class="column">
+					<img class="demo cursor" src="vistas/img/servicios/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Sesacion duradera">
+					</div>
+					<div class="column">
+					<img class="demo cursor" src="vistas/img/servicios/1.jpg" style="width:100%" onclick="currentSlide(5)" alt="cuida tu piel">
+					</div>  
+				</div>
+				<div class="col-sm-10 quitar_padding">  	
 
-			  <div class="mySlides">
-			    <div class="numbertext">3 / 5</div>
-			    <img src="vistas/img/servicios/3.jpg" style="width:100%">
-			  </div>
-			    
-			  <div class="mySlides">
-			    <div class="numbertext">4 / 5</div>
-			    <img src="vistas/img/servicios/4.jpg" style="width:100%">	
-			  </div>
+					<div class="mySlides">
+						<div class="numbertext">1 / 5</div>
+						<img src="vistas/img/servicios/1.jpg" style="width:100%">
+					</div>
 
-			  <div class="mySlides">
-			    <div class="numbertext">5 / 5</div>
-			    <img src="vistas/img/servicios/1.jpg" style="width:100%">
-			  </div>	
-			    
-			  <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-			  <a class="next" onclick="plusSlides(1)"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+					<div class="mySlides">
+						<div class="numbertext">2 / 5</div>
+						<img src="vistas/img/servicios/2.jpg" style="width:100%">
+					</div>
 
-			  <div class="row">
-			    <div class="column">
-			      <img class="demo cursor" src="vistas/img/servicios/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Sensacciones inolvidables">
-			    </div>
-			    <div class="column">
-			      <img class="demo cursor" src="vistas/img/servicios/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Procedimiento profecional">
-			    </div>
-			    <div class="column">
-			      <img class="demo cursor" src="vistas/img/servicios/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Tu piel luce fantastico">
-			    </div>
-			    <div class="column">
-			      <img class="demo cursor" src="vistas/img/servicios/4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Sesacion duradera">
-			    </div>
-			    <div class="column">
-			      <img class="demo cursor" src="vistas/img/servicios/1.jpg" style="width:100%" onclick="currentSlide(5)" alt="cuida tu piel">
-			    </div>    
-			  
-			  </div>
+					<div class="mySlides">
+						<div class="numbertext">3 / 5</div>
+						<img src="vistas/img/servicios/3.jpg" style="width:100%">
+					</div>
+						
+					<div class="mySlides">
+						<div class="numbertext">4 / 5</div>
+						<img src="vistas/img/servicios/4.jpg" style="width:100%">	
+					</div>
+
+					<div class="mySlides">
+						<div class="numbertext">5 / 5</div>
+						<img src="vistas/img/servicios/1.jpg" style="width:100%">
+					</div>	
+						
+					<a class="prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					<a class="next" onclick="plusSlides(1)"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+				</div>
+				</div>			  
 			</div>	
-			</div>		
-		</div>
-		<div class="col-sm p_detalle_descriipcion">
+		</div>		
 
-			<h3><?php echo $nombre;?></h3>
-			<p><?php
-			$cadena1=$caracteristicas;
-			$resultado1 = str_replace("+", "<br/>-", $cadena1);
+	<div class="col-sm-5 p_detalle_descriipcion">
 
-			echo $resultado1;
-			?></p>
-			<br>
-			<h5><span class="text-green-aloe">Duracion:</span><strong><?php echo $duracion."min";?> </strong></h5>
+			<h3><?php echo $nombre; ?></h3>
+			<p><?php echo $descripcion; ?></p>
+			
+			<h5><span class="text-green-aloe">Duración:</span><strong><?php echo $duracion."min";?> </strong></h5>
 			<h5><span class="text-green-aloe">Precio:</span><strong><?php echo "$".$precio;?></strong></h5>
 			<br>
 			<a class="btn-green-aloe" href="#">Agendar</a>
 			<hr>
-			<span><small>Categoria: Depilacion</small></span>
+			<span><small>Categoría: <?php echo $nombre_grupo; ?></small></span>
 		   	<div class="redes_sociales rs_s_detalles">
 	   
 	        	<a href="#"><img src="vistas/img/iconos/redes/fb.png" alt=""></a> 
@@ -112,16 +108,18 @@
 	        	<a href="#"><img src="vistas/img/iconos/redes/gp.png" alt=""></a> 
 	      	</div>
 						
-		</div>
+	
 
 	</div>
+	</div>
+	<div class="line"></div>
 
 	<div class="row detalles_opiniones">
 
 		<div class="container">
 			<ul id="tabs" class="nav nav-tabs" role="tablist">
 		        <li class="nav-item">
-		            <a id="tab-A" href="#pane-A" class="nav-link active" data-toggle="tab" role="tab">Descirpcion</a>
+		            <a id="tab-A" href="#pane-A" class="nav-link active" data-toggle="tab" role="tab">Descripción</a>
 		        </li>
 		        <li class="nav-item">
 		            <a id="tab-B" href="#pane-B" class="nav-link" data-toggle="tab" role="tab">Opiniones</a>
@@ -143,7 +141,7 @@
 		            <!-- Note: New place of `data-parent` -->
 		            <div id="collapse-A" class="collapse show" data-parent="#content" role="tabpanel" aria-labelledby="heading-A">
 		                <div class="card-body">
-		                   <?php echo $caracteristicas; ?>
+		                   <?php echo nl2br($caracteristicas); ?>
 		                </div>
 		            </div>
 		        </div>
@@ -169,12 +167,13 @@
 	<?php
 	}
 	?>
-	<div class="row">
+	<div class="row txt_sucursales">
 
-		<div class="row subtitulo">
-            <span class="text-green-aloe">Servicios</span> 
-            <span class="txt_azul"> Relacionados en </span><br>
-            <span class="txt_sin_espacio"><?php echo $nombre_grupo ;?></span>
+		<div class="row">
+            
+			<h3 class="txt_azul"> Servicios Relacionados en </h3>
+			
+            <h3 class="text-green-aloe"><?php echo $nombre_grupo ;?></h3>
         </div>
 	 	<ul id="flexiselDemo3">
 

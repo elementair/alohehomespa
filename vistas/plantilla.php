@@ -304,37 +304,12 @@ if(isset($_GET["pagina"])){
             <link rel="stylesheet" type="text/css" href="vistas/css/sucursales.css">
             <link rel="stylesheet" href="vistas/css/slideshow_gallery.css">
             <script src="vistas/js/slideshow_gallery.js"></script>
-            <script>
             
-            var slideIndex = 1;
-            showSlides(slidIndex);
+            <script src="vistas/js/sucursal_galeria.js">             
+      
 
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
+            </script>
 
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("demo");
-              var captionText = document.getElementById("caption");
-              if (n > slides.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " active";
-              captionText.innerHTML = dots[slideIndex-1].alt;
-            }
-        </script>
         <?php
         include_once $base."plantilla/sucursales.php";
         
@@ -387,9 +362,16 @@ include_once $base."modulo/footer.php";
 <script src="vistas/mdb/js/bootstrap.min.js"></script>
 <script src="vistas/mdb/js/popper.min.js"></script>
 <script src="vistas/mdb/js/jquery.min.js"></script>
+<script src="vistas/mdb/js/modules/forms-free.min.js"></script>
 
 <script src="vistas/js/jquery-modal-video.min.js"></script>
-<script>
+    <script>
+        $('.datepicker').pickadate({
+        editable: true
+        })
+    </script>
+
+    <script>
     $(".js-video-button").modalVideo({
         youtube:{
             autoplay: 1,

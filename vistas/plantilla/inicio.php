@@ -226,14 +226,12 @@
                         <option value="6">Pedicure</option>
                         <option value="7">Aparatología Facial</option>
                         <option value="8">Coberturas</option>
-                        <option value="9">Aparatología</option>
-
+                       
                     </select>
-
-                    <!--Message-->
+                    
                     <div class="md-form">
-                        <textarea id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>
-                        <label for="materialContactFormMessage">Mensaje</label>
+                        <input placeholder="Selecciona la Fecha" type="text" id="date-picker-example" class="form-control datepicker">
+                        <label for="date-picker-example">Fecha...</label>
                     </div>
 
                     <!-- Copy -->
@@ -242,17 +240,17 @@
                         <label class="form-check-label" for="materialUnchecked">Términos y condiciones</label>
                     </div>
 
-                    <!-- Send button -->
-                    <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">CONTINUAR</button>
+                   
                 
                 </div>
 
                 <div class="col-12 col-sm">
 
-                    <label for=""> Datos personales</label>
+                <san> Datos personales</span>
 
                     <!-- nombre -->
                     <div class="md-form mt-3">
+                    
                         <input type="text" id="materialContactFormName" class="form-control">
                         <label for="materialContactFormName">Nombre</label>
                     </div>
@@ -275,6 +273,9 @@
                         <label for="materialContactFormName">Teléfono</label>
                     </div>
 
+                     <!-- Send button -->
+                     <button class="btn btn-primary btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">CONTINUAR</button>
+
                 </div>
                 
             </div>
@@ -295,11 +296,11 @@
     <div class="container">
 
         <div class="row subtitulo">
-            <span class="txt_verde" > Conoce</span> 
+            <span class="txt_verde" > Conoce</span>&nbsp; 
             <span class="txt_azul" > Nuestras Sucursales</span> 
         </div>
 
-        <div class="row">
+        <div class="row inicio_seccion_sucursales">
 
             <ul id="flexiselDemo4">
 
@@ -336,7 +337,7 @@
                      <div class="line"></div>
 
                 <div class="subtitulo">
-                    <span class="txt_azul txt_sin_espacio" >Forma parte del equipo de</span> 
+                    <span class="txt_azul txt_sin_espacio" >Forma parte del equipo de</span>&nbsp;
                     <span class="txt_verde txt_sin_espacio">Aloe Home Spa</span> 
                     <span class="txt_italica">¡Tenemos un plan de inversión para ti! </span>
                 </div>

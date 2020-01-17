@@ -48,33 +48,31 @@
             <div id="nav">
                 <li><a id="inicio" href="index.php">HOME</a></li>
                 
-                <li class="dropdown dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <a id="nosotros" href="index.php?pagina=servicios" >SERVICIOS</a>
+                <li class="dropdown dropdown-toggle" id="dropdownMenuButton">
+                  <a id="nosotros" href="index.php?pagina=servicios" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICIOS</a>
                
                     <div class="submenu dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <?php
-                                foreach ($grupo_servicios as $grupo_servicio) {
-                                    $nombre =$grupo_servicio['nombre'];
-                                    $id = $grupo_servicio['id'];
-                                    ?>
-                                    <a class="dropdown-item" href="index?pagina=servicios&grupo_servicios_id=<?php echo $id; ?>"><?php echo $nombre; ?></a>
-                                    
-                                    <?php
-                                }
+                            foreach ($grupo_servicios as $grupo_servicio) {
+                                $nombre =$grupo_servicio['nombre'];
+                                $id = $grupo_servicio['id'];
                                 ?>
-<!--                         <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a> -->
+                                <a class="dropdown-item" href="index?pagina=servicios&grupo_servicios_id=<?php echo $id; ?>"><?php echo $nombre; ?></a>
+                                
+                                <?php
+                            }
+                        ?>
                     </div>
 
                  </li>
-                 <li class="dropdown dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <a id="servicios" href="index.php?pagina=sucursales">SUCURSALES</a>
+                 <li class="dropdown dropdown-toggle" id="dropdownMenuButton" >
+                  <a id="servicios" href="index.php?pagina=sucursales" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SUCURSALES</a>
                
                     <div class="submenu dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="index?pagina=sucursales">GDL | Naciones Unidas</a>
+                        <a class="dropdown-item" href="#">GDL | Nueva suc</a>
+                        <a class="dropdown-item" href="#">MICH| Sahuayo</a>
+                       
                     </div>
 
                  </li>
@@ -93,7 +91,7 @@
         </div>
         <div class="brand-datos">
             <a href="#" target="_blank"><img src="vistas/img/iconos/user.png"></a>
-            <a class="btn-green-aloe btn_agendar" href="#">agenda tu cita</a>
+            <a class="btn-green-aloe btn_agendar" href="#">Agenda tu cita</a>
             <a href="#" target="_blank"><img src="vistas/img/iconos/cart.png"></a>
         </div>
         <a href="#" onclick="return false" id="btn-toggle"><img src="vistas/img/menu_responsivo.png" class="btn-menu" height="25" width="30" alt=""></a>
