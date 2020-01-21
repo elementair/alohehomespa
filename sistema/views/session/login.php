@@ -2,7 +2,7 @@
 <div class="container">
 	
   	<div class="card card-container">
-   		<img id="profile-img" class="profile-img-card" src="<?php echo $ruta_universal.'sistema/views/img/logoshifra.jpg'?>" />
+   		<img id="profile-img" class="profile-img-card" src="<?php echo $ruta_universal.'sistema/views/img/logo_sistema.jpg'?>" />
      	<p id="profile-name" class="profile-name-card"></p>
       	<form class="form-signin" method="post"  action="./index.php?seccion=session&accion=loguea">
 			   <span id="reauth-email" class="reauth-email"></span>

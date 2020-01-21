@@ -1160,7 +1160,7 @@ public function upload_file($cols=12, $campo=false, $ln=false){
 		    $valor = "<img src='$valor' class='img-rounded img-thumbnail'>";
         }
 
-		$html = " <span><label style='color:#4c05007a;' >$etiqueta: </label> $valor </span><br> ";
+		$html = " <span><label style='color:#95d3587a;' >$etiqueta: </label> $valor </span><br> ";
 		return $html;
 	}
 

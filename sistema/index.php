@@ -104,11 +104,9 @@ if(isset($_SESSION['id'])){
   <![endif]-->
 
   <!-- Google Font -->
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-        
-        <!-- propios -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+       
+  <!-- propios -->
     
   <meta charset="utf-8" name="viewport"content="
                 width=device-width, height=device-height,
@@ -121,26 +119,19 @@ if(isset($_SESSION['id'])){
   <!-- <link rel="stylesheet" href="./views/css/layout.css" media="print"> -->
   <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
 
-  <!-- editor -->
-
-  
-<!--   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link href="views/bower_components/text_editor/editor.css" type="text/css" rel="stylesheet"/> -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
 </head>
 	<body class="hold-transition skin-red sidebar-mini img_inicio_fondo">
 
-        <!-- <div class="wrapper"> -->
-            
-                
-                <?php if($seguridad->menu){
+<!-- <div class="wrapper"> -->
 
-                ?>
-                  <header class="main-header">
+    
+    <?php if($seguridad->menu){
+
+    ?>
+      <header class="main-header">
 
     <!-- Logo -->
     <a href="index.php" class="logo">
@@ -257,70 +248,160 @@ if(isset($_SESSION['id'])){
  <div class="content-wrapper">
 <?php } ?>
           
-		<!-- Content Wrapper. Contains page content -->
+  <!-- Content Wrapper. Contains page content -->
 
-    <!-- Content Header (Page header) -->
-    <section class="content-header container contenido">       
+  <!-- Content Header (Page header) -->
+  <section class="content-header container contenido">       
 
-           <!--  <hr> -->
-           <?php 
-                require_once "../config/ruta.php";
-            ?>
-              <h3><a href="<?php echo $ruta_universal.'index.php';?>" >
-                <span class="glyphicon glyphicon-credit-card" style="color: rgb(162,131,86,1); top: 5px;" title="Página Web"></span>
-              </a>ALOE HOME SPA</h3>
-           <!--  <hr> -->
-            <?php
-            $class_mensaje = "";
-            if(isset($_GET['tipo_mensaje'])){
-                $tipo_mensaje = $_GET['tipo_mensaje'];
-                if($tipo_mensaje == 'error'){
-                    $class_mensaje = 'alert alert-danger';
-                }
-                else{
-                    if($tipo_mensaje == 'exito'){
+<!--  <hr> -->
+<?php 
+    require_once "../config/ruta.php";
+?>
+  <h3><a href="<?php echo $ruta_universal.'index.php';?>" >
+    <span class="glyphicon glyphicon-credit-card" style="color: rgb(162,131,86,1); top: 5px;" title="Página Web"></span>
+  </a>ALOE HOME SPA</h3>
+<!--  <hr> -->
+<?php
+$class_mensaje = "";
+if(isset($_GET['tipo_mensaje'])){
+    $tipo_mensaje = $_GET['tipo_mensaje'];
+    if($tipo_mensaje == 'error'){
+        $class_mensaje = 'alert alert-danger';
+    }
+    else{
+        if($tipo_mensaje == 'exito'){
 
-                        $class_mensaje = 'alert alert-success';
-                    }
-                }
-            }
-            if(isset($controlador->error)){
-                if($controlador->error == 1){
-                    $class_mensaje = 'alert alert-danger';
-                    $mensaje = $controlador->mensaje;
-                    ?>
-                    <div class="<?php echo $class_mensaje; ?> mensaje" ><?php echo $mensaje; ?></div>
-                <?php
-                }
-            }
-            if(isset($_GET['mensaje'])){
-                $mensaje = $_GET['mensaje'];
-            }
-            else{
-                $mensaje = "";
-            } ?>
-            <div class="<?php echo $class_mensaje; ?> mensaje" ><?php echo $mensaje; ?></div>
-            <?php
-            $include = './views/'.$seccion.'/'.$accion.'.php';
-            if(file_exists($include)){
-                include($include);
-            }
-            if(ACCION == 'lista') {
-                include('./views/vista_base/lista.php');
-            }
-            if (ACCION=='modifica'){
-                include('./views/vista_base/modifica.php');
-            }
-            if (ACCION=='alta'){
-                include('./views/vista_base/alta.php');
-            } 
+            $class_mensaje = 'alert alert-success';
+        }
+    }
+}
+if(isset($controlador->error)){
+    if($controlador->error == 1){
+        $class_mensaje = 'alert alert-danger';
+        $mensaje = $controlador->mensaje;
+        ?>
+        <div class="<?php echo $class_mensaje; ?> mensaje" ><?php echo $mensaje; ?></div>
+    <?php
+    }
+}
+if(isset($_GET['mensaje'])){
+    $mensaje = $_GET['mensaje'];
+}
+else{
+    $mensaje = "";
+} ?>
+<div class="<?php echo $class_mensaje; ?> mensaje" ><?php echo $mensaje; ?></div>
 
-            if (isset($_GET['agenda'])){
+<?php if($seguridad->menu){
+?>
 
-               include('./calendario/index.php');
-            }
-            ?>
-        </section>
+<div class="row">
+  <div class="col-lg-3 col-xs-6">
+  <!-- small box -->
+  <div class="small-box bg-yellow">
+  <div class="inner">
+  <?php 
+  $sql=mysqli_query($link,"SELECT * FROM control_citas");
+    
+    $numero = mysqli_num_rows($sql);
+    echo '<h3>'.$numero.'</h3>'; 
+    ?>
+
+  <p>Citas</p>
+  </div>
+  <div class="icon">
+  <i class="ion ion-android-folder"></i>
+  </div>
+
+  <a href="index.php?seccion=control_citas&accion=lista" class="small-box-footer">VER LISTA <i class="fa fa-arrow-circle-right"></i></a>
+  </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 col-xs-6">
+  <!-- small box -->
+  <div class="small-box bg-yellow">
+  <div class="inner">
+  <?php 
+  $sql=mysqli_query($link,"SELECT * FROM sucursales");
+    
+    $numero = mysqli_num_rows($sql);
+    echo '<h3>'.$numero.'<sup style="font-size: 20px"></sup></h3>'; 
+
+    ?>
+
+  <p>Productos</p>
+  </div>
+  <div class="icon">
+  <i class="ion ion-android-folder"></i>
+  </div>
+  <a href="#" class="small-box-footer">VER LISTA <i class="fa fa-arrow-circle-right"></i></a>
+  </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 col-xs-6">
+  <!-- small box -->
+  <div class="small-box bg-yellow">
+  <div class="inner">
+  <?php 
+  $sql=mysqli_query($link,"SELECT * FROM usuario");
+    
+    $numero = mysqli_num_rows($sql);
+    echo '<h3>'.$numero.'</h3>'; 
+
+    ?>
+  <p>Promociones</p>
+  </div>
+  <div class="icon">
+  <i class="ion ion-android-folder"></i>
+  </div>
+  <a href="#" class="small-box-footer">VER LISTA <i class="fa fa-arrow-circle-right"></i></a>
+  </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-3 col-xs-6">
+  <!-- small box -->
+  <div class="small-box bg-yellow">
+  <div class="inner">
+  <?php 
+  $sql=mysqli_query($link,"SELECT * FROM servicios");
+    
+    $numero = mysqli_num_rows($sql);
+    echo '<h3>'.$numero.'</h3>'; 
+
+    ?>
+
+  <p>Servicios</p>
+  </div>
+  <div class="icon">
+  <i class="ion ion-android-folder"></i>
+  </div>
+  <a href="index.php?seccion=servicios&accion=lista" class="small-box-footer">VER LISTA <i class="fa fa-arrow-circle-right"></i></a>
+  </div>
+  </div>
+  <!-- ./col -->
+</div>
+<?php } ?>
+    <?php
+    $include = './views/'.$seccion.'/'.$accion.'.php';
+    if(file_exists($include)){
+        include($include);
+    }
+    if(ACCION == 'lista') {
+        include('./views/vista_base/lista.php');
+    }
+    if (ACCION=='modifica'){
+        include('./views/vista_base/modifica.php');
+    }
+    if (ACCION=='alta'){
+        include('./views/vista_base/alta.php');
+    } 
+
+    if (isset($_GET['agenda'])){
+
+        include('./calendario/index.php');
+    }
+    ?>
+</section>
 		</div>
         <?php if($seguridad->menu){ ?>
          <footer class="main-footer">

@@ -156,6 +156,7 @@ display:none;
     font-size: 13px;
     border: 0px solid #ccc;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 /*Menu Responsive*/

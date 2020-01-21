@@ -174,8 +174,9 @@
 			<h3 class="txt_azul"> Servicios Relacionados en </h3>
 			
             <h3 class="text-green-aloe"><?php echo $nombre_grupo ;?></h3>
-        </div>
-	 	<ul id="flexiselDemo3">
+		</div>
+	
+	 	<ul id="flexiselDemo3" class="relacionados">
 
 
 			<?php
@@ -203,7 +204,7 @@
             <li> 
             	<div class="card">
 		            <h5 class="card-header font-weight-bold"><?php echo $nombre;?></h5>
-		            <div class="card-body">
+		            <div class="card-body quitar_padding">
 		            	<div class="row">
 			            	<div class="col-sm-6">
 							<a href="index?pagina=servicios_detalle&servicio_id=<?php echo $id_servicio; ?>&grupo_servicio_id=<?php echo $grupo_servicio_id; ?>">
@@ -211,10 +212,12 @@
 							</a>	            		
 
 			            	</div>
-			            	<div class="col-sm-6">			            	       		   
+			            	<div class="col-sm-6 ">
+							<div class="line_text"></div>			            	       		   
 				               	<h6><span class="text-green-aloe" >Duración</span><?php echo $duracion."min";?></h6>
-				                <h6><span class="text-green-aloe" >Precio</span><?php echo "$".$precio;?></h6>
-				                <h6><a href="#" class="btn-green-aloe">Ver detalles</a></h6>
+								<h6><span class="text-green-aloe" >Precio</span><?php echo "$".$precio;?></h6>
+								<div class="line_text"></div>	
+				                <h6><a href="index?pagina=servicios_detalle&servicio_id=<?php echo $id_servicio; ?>&grupo_servicio_id=<?php echo $grupo_servicio_id; ?>" class="btn-green-aloe">Ver detalles</a></h6>
 			            	</div>
 			            </div>		                
 		            </div>
@@ -228,7 +231,8 @@
 			?>
 
                                         
-        </ul>  
+		</ul>  
+		
 	</div>
 	<br/>
 	

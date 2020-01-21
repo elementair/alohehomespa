@@ -73,6 +73,11 @@ section{
     width: 100px;
     position: relative;
 }
+.line_text{
+    margin-top: 20px;
+    width: 100px;
+    position: relative;
+}
 
 .txt_verde{
     color: #a8d162;
@@ -104,6 +109,17 @@ section{
 }
 .quitar_padding{
     padding: 0px !important;
+}
+.texto_padding{
+
+    padding: 5px !important;
+}		
+.btn-primary {
+    color: #fff;
+    background-color: #40c0f0 !important;
+}            	       		   
+.breadcrumb li{
+    text-transform: uppercase;
 }
 
 /*________________________________________

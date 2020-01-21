@@ -13,11 +13,23 @@
 		<div class="col-12 col-sm">
 	      	<nav aria-label="breadcrumb">
 			  	<ol class="breadcrumb">
+				  <?php
+		                foreach ($grupo_servicios as $grupo_servicio) {
+		                    $nombre =$grupo_servicio['nombre'];
+		                    $imagen = $grupo_servicio['archivo'];
+							$id = $grupo_servicio['id'];
+							if($id==$_GET['grupo_servicios_id']){
+		            ?>
 				    <li class="breadcrumb-item">HOME</li>
-				    <li class="breadcrumb-item">SERVICIOS</li>
-				    <li class="breadcrumb-item"><a href="#">Depilación</a></li>
-				    <li class="breadcrumb-item active" aria-current="page">Mujer</li>
-			 	 </ol>
+				    <li class="breadcrumb-item"><?php echo $nombre;?></li>
+				    <!-- <li class="breadcrumb-item"><a href="#">Depilación</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Mujer</li> -->
+					<?php
+						}
+					} 
+					?>
+				  </ol>
+				
 			</nav>
 		</div>
 
@@ -171,18 +183,19 @@
 		            <div class="card-body quitar_padding">
 		            	<div class="row">
 
-			            	<div class="col-sm-3 ">
+			            	<div class="col-sm-3">
 			            		<a href="index?pagina=servicios_detalle&servicio_id=<?php echo $id_servicio; ?>&grupo_servicio_id=<?php echo $grupo_id; ?>">
 			            			<img class="img_producto"  src="<?php echo $ruta_base.$archivo; ?>"></img>
 			            		</a>     					            		
 			            	</div>
 
-			            	<div class="col-sm-9 ">
+			            	<div class="col-sm-9">
+							
 			            		<h6 class="text-green-aloe">Descripción</h6>
 				            		<p>
 				            			<?php echo $descripcion; ?>
 				            		</p>
-				                <div class="table_details table-responsive quitar_padding">
+				                <div class="table_details table-responsive ">
 								    <table class="table">
 								        <thead>
 								            <tr>
@@ -192,7 +205,7 @@
 								            </tr>
 								        </thead>
 								        <tbody>
-								            <tr>
+								            <tr >
 								                <td><h4><?php echo "$".$precio; ?></h4></td>								            
 								                <td><h4><?php echo $duracion."min"; ?></h4></td>
 								                <td><div class="d-flex justify-content-center">
