@@ -298,20 +298,19 @@ else{
 <div class="row">
   <div class="col-lg-3 col-xs-6">
   <!-- small box -->
-  <div class="small-box bg-yellow">
+  <div class="small-box bg-aloe">
   <div class="inner">
+     <p>Citas
   <?php 
   $sql=mysqli_query($link,"SELECT * FROM control_citas");
     
     $numero = mysqli_num_rows($sql);
-    echo '<h3>'.$numero.'</h3>'; 
+    echo '<sup>'.$numero.'</sup>'; 
     ?>
 
-  <p>Citas</p>
+ </p>
   </div>
-  <div class="icon">
-  <i class="ion ion-android-folder"></i>
-  </div>
+
 
   <a href="index.php?seccion=control_citas&accion=lista" class="small-box-footer">VER LISTA <i class="fa fa-arrow-circle-right"></i></a>
   </div>
@@ -319,62 +318,59 @@ else{
   <!-- ./col -->
   <div class="col-lg-3 col-xs-6">
   <!-- small box -->
-  <div class="small-box bg-yellow">
+  <div class="small-box bg-aloe">
   <div class="inner">
+     <p>Citas
   <?php 
   $sql=mysqli_query($link,"SELECT * FROM sucursales");
     
     $numero = mysqli_num_rows($sql);
-    echo '<h3>'.$numero.'<sup style="font-size: 20px"></sup></h3>'; 
+    echo '<sup>'.$numero.'</sup>'; 
 
     ?>
 
-  <p>Productos</p>
+  </p>
   </div>
-  <div class="icon">
-  <i class="ion ion-android-folder"></i>
-  </div>
+
   <a href="#" class="small-box-footer">VER LISTA <i class="fa fa-arrow-circle-right"></i></a>
   </div>
   </div>
   <!-- ./col -->
   <div class="col-lg-3 col-xs-6">
   <!-- small box -->
-  <div class="small-box bg-yellow">
+  <div class="small-box bg-aloe">
   <div class="inner">
+     <p>Promociones
   <?php 
   $sql=mysqli_query($link,"SELECT * FROM usuario");
     
     $numero = mysqli_num_rows($sql);
-    echo '<h3>'.$numero.'</h3>'; 
+    echo '<sup>'.$numero.'</sup>'; 
 
     ?>
-  <p>Promociones</p>
+ </p>
   </div>
-  <div class="icon">
-  <i class="ion ion-android-folder"></i>
-  </div>
+
   <a href="#" class="small-box-footer">VER LISTA <i class="fa fa-arrow-circle-right"></i></a>
   </div>
   </div>
   <!-- ./col -->
   <div class="col-lg-3 col-xs-6">
   <!-- small box -->
-  <div class="small-box bg-yellow">
+  <div class="small-box bg-aloe">
   <div class="inner">
+    <p>Servicios
   <?php 
   $sql=mysqli_query($link,"SELECT * FROM servicios");
     
     $numero = mysqli_num_rows($sql);
-    echo '<h3>'.$numero.'</h3>'; 
+    echo '<sup>'.$numero.'</sup>'; 
 
     ?>
 
-  <p>Servicios</p>
+  </p>
   </div>
-  <div class="icon">
-  <i class="ion ion-android-folder"></i>
-  </div>
+  
   <a href="index.php?seccion=servicios&accion=lista" class="small-box-footer">VER LISTA <i class="fa fa-arrow-circle-right"></i></a>
   </div>
   </div>

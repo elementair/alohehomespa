@@ -227,10 +227,10 @@ class templates{
 
     public function obten_panel($status){
         if($status == 1){
-            $panel_class = 'panel panel-info';
+            $panel_class = 'default';
         }
         else{
-            $panel_class = 'panel panel-danger';
+            $panel_class = 'danger';
         }
         return $panel_class;
     }
@@ -341,13 +341,13 @@ class templates{
     }
 
     public function body_registro($seccion, $registro){
-        $html = "<div class='panel-body'>";
+        $html = "<td>";
         $html = $html.$this->obten_elementos_body($seccion, $registro);
-        $html = $html."</div>";
+        $html = $html."</td>";
         return $html;
     }
     public function footer_registro($seccion, $registro,$link){
-        $html = "<div class='panel-footer'>";
+        $html = "<td>";
         if($seccion == 'accion_grupo'){
             $status = 1;
         }
@@ -355,25 +355,30 @@ class templates{
             $status = $registro[$seccion.'_status'];
         }
         $html = $html.$this->obten_acciones($seccion, $registro[$seccion.'_id'], $status,$link);
-        $html = $html."</div>";
+        $html = $html."</td>";
         return $html;
     }
     public function registro($panel_class, $registro, $seccion,$link){
         $directiva = new Directivas();
-        $html = "<div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>";
-        $html = $html."<div class='registro $panel_class'>";
+        // $html = "<div class='col-xs-12 col-sm-6 col-md-4 col-lg-3'>";
+        $html = "<tr class='$panel_class'>";
+        
         $html = $html.$directiva->div_encabezado_registro_lista($registro[$seccion.'_id']);
         $html = $html.$this->body_registro($seccion, $registro);
         $html = $html.$this->footer_registro($seccion, $registro,$link);
-        $html = $html."</div>";
-        $html = $html."</div>";
+        $html = $html."</tr>";
+        // $html = $html."</div>";
+
+
+       
+
         return $html;
     }
 
     public function panel_completo($salto_linea, $registro, $seccion,$link){
         $html = "";
         if($salto_linea == 0){
-            $html = $html."<div class='row'>";
+            $html = $html."";
         }
         if($seccion == 'accion_grupo'){
             $status = 1;
@@ -384,7 +389,7 @@ class templates{
         $panel_class = $this->obten_panel($status);
         $html = $html.$this->registro($panel_class, $registro, $seccion,$link);
         if($salto_linea == 3){
-            $html = $html."</div><br>";
+            $html = $html."";
         }
         return $html;
     }
@@ -394,12 +399,12 @@ class templates{
         $contador = 0;
         $salto_linea = 0;
         foreach ($registros as $key => $registro) {
-            $salto_linea = $contador%4;
+            $salto_linea = $contador%1;
             $contador++;
             $html = $html.$this->panel_completo($salto_linea, $registro, $seccion,$link);
         }
         if($salto_linea < 3){
-            $html = $html."</div><br>";
+            $html = $html."<br>";
         }
         return $html;
     }
@@ -408,14 +413,20 @@ class templates{
         $directiva = new Directivas();
         $html = $breadcrumbs;
         $html = $html.$directiva->div_busqueda();
-        $html = $html."<br>";
-        $html = $html."<div class='panel panel-default lista'>";
-        $html = $html."<div class='panel-heading'>";
-        $html = $html.str_replace('_',' ',ucfirst($seccion));
-        $html = $html."</div>";
-        $html = $html."<div class='panel-body' id='contenido_lista'>";
+        $html = $html."<div class='row col-md-12'>";
+        $html = $html."<h4>".str_replace('_',' ',ucfirst($seccion))."</h4>";
+        $html = $html."<table class='table table-striped'>";
+        $html = $html."<thead>";
+        // $html =  $html.$directiva->div_encabezado_registro_lista_head($contenido);
+        // $html = $html.$etiqueta;
+        $html = $html.$directiva->div_encabezado_registro_lista_head($seccion."_id");
+        $html = $html." </thead>";
+        $html = $html."<tbody id='contenido_lista'>";
         $html = $html.$this->lista($registros,$seccion,$link);
-        $html = $html."</div></div>";
+        $html = $html."</tbody></table></div>";
+        $html = $html."<div id='myModal' class='modal'>
+                            <img class='modal-content' id='img01'>
+                        </div>";
         return $html;
     }
 }

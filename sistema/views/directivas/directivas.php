@@ -118,10 +118,16 @@ public function upload_file($cols=12, $campo=false, $ln=false){
 		$html = $html."</div>";
 		return $html;
 	}
+    public function div_encabezado_registro_lista_head($contenido){
+        $etiqueta = $this->genera_texto_etiqueta(SECCION);
+        $html = "<th><b class='registro_id'>$etiqueta</b></td>";
+        return $html;
+    }
 
 	public function div_encabezado_registro_lista($contenido){
         $etiqueta = $this->genera_texto_etiqueta(SECCION);
-		$html = "<div class='panel-heading'>$etiqueta: <b class='registro_id'>$contenido</b></div>";
+		$html = "<td><b class='registro_id'>$contenido</b></td>";
+        // $html = "<td>$etiqueta: <b class='registro_id'>$contenido</b></td>";
 		return $html;
 	}
 
@@ -674,7 +680,7 @@ public function upload_file($cols=12, $campo=false, $ln=false){
         $campo_capitalize = $this->genera_texto_etiqueta($campo);
 
         $html = "<div class='form-group col-md-$cols'>";
-        $html = $html."<label>$campo_capitalize: hola</label>";
+        $html = $html."<label>$campo_capitalize: </label>";
         $html = $html."<div class='col-md-12 contenedor_registros'>";
 
         $html = $html.$this->registro_lista($tablas,$campos_llenables,$arreglo,
@@ -813,14 +819,14 @@ public function upload_file($cols=12, $campo=false, $ln=false){
     }
 
     public function link_paga_factura($seccion, $id){
-        $html = "<a href='index.php?seccion=$seccion&accion=paga_factura&factura_id=$id' title='Paga Factura'>
+        $html = "<a class='i_accion' href='index.php?seccion=$seccion&accion=paga_factura&factura_id=$id' title='Paga Factura'>
   					<span class='glyphicon glyphicon-usd' aria-hidden='true'></span>
   				</a>";
         return $html;
     }
 
     public function link_descarga_factura_xml($seccion, $id){
-        $html = "<a href='index.php?seccion=$seccion&accion=descarga_factura_xml&factura_id=$id' 
+        $html = "<a class='i_accion' href='index.php?seccion=$seccion&accion=descarga_factura_xml&factura_id=$id' 
             title='Descarga factura XML' download>
   					<span class='glyphicon glyphicon-file' aria-hidden='true'></span>
   				</a>";
@@ -829,14 +835,14 @@ public function upload_file($cols=12, $campo=false, $ln=false){
 
 
     public function link_carga_datos_servicio($seccion,$id){
-        $html = "<a href='index.php?seccion=$seccion&accion=carga_datos_servicio&".$seccion."_id=$id' title='Carga datos de servicio'>
+        $html = "<a class='i_accion'  href='index.php?seccion=$seccion&accion=carga_datos_servicio&".$seccion."_id=$id' title='Carga datos de servicio'>
   					<span class='glyphicon glyphicon-cog' aria-hidden='true'></span>
   				</a>";
         return $html;
     }
 
 	public function link_asigna_permiso($seccion,$id){
-		$html = "<a href='index.php?seccion=$seccion&accion=asigna_accion&".$seccion."_id=$id' title='asigna permiso'>
+		$html = "<a class='i_accion' href='index.php?seccion=$seccion&accion=asigna_accion&".$seccion."_id=$id' title='asigna permiso'>
   					<span class='glyphicon glyphicon-lock' aria-hidden='true'></span>
   				</a>";
   		return $html;		
@@ -857,7 +863,7 @@ public function upload_file($cols=12, $campo=false, $ln=false){
 
 	public function link_desactiva($id){
 		$html = "
-		<a href='#registro_$id' class='link_accion desactiva' title='Desactiva registro'>
+		<a class='i_accion' href='#registro_$id' class='link_accion desactiva' title='Desactiva registro'>
   			<span class='glyphicon glyphicon-minus' aria-hidden='true'></span>
   		</a>";
   		return $html;
@@ -866,21 +872,21 @@ public function upload_file($cols=12, $campo=false, $ln=false){
 
 	public function link_elimina($id){
 		$html = "
-		<a href='#registro_$id' class='link_accion elimina' title='Elimina'>
+		<a class='i_accion' href='#registro_$id' class='link_accion elimina' title='Elimina'>
 			<span class='glyphicon glyphicon-trash' aria-hidden='true'></span>
   		</a>";
   		return $html;
 	}
 
 	public function link_elimina_externa($seccion,$id){
-        $html = "<a href='index.php?seccion=$seccion&accion=elimina_cuenta_bd&registro_id=$id' title='Elimina Cuenta'>
+        $html = "<a class='i_accion' href='index.php?seccion=$seccion&accion=elimina_cuenta_bd&registro_id=$id' title='Elimina Cuenta'>
   					<span class='glyphicon glyphicon-trash' aria-hidden='true'></span>
   				</a>";
         return $html;
     }
 
 	public function link_modifica($seccion,$id){
-		$html = "<a href='index.php?seccion=$seccion&accion=modifica&registro_id=$id' title='Modifica'>
+		$html = "<a class='i_accion' href='index.php?seccion=$seccion&accion=modifica&registro_id=$id' title='Modifica'>
   					<span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>
   				</a>";
   		return $html;
@@ -1157,10 +1163,18 @@ public function upload_file($cols=12, $campo=false, $ln=false){
             $valor = $this->video_registro(false, $valor);
         }
         elseif ($tipo == 'imagen'){
-		    $valor = "<img src='$valor' class='img-rounded img-thumbnail'>";
+		    $valor = "<img src='$valor' id='myImg'  class='img-rounded img-thumbnail' style='width: 50px; border-radius: 50%;'>";
+
+
+
+
+
+
+
         }
 
-		$html = " <span><label style='color:#95d3587a;' >$etiqueta: </label> $valor </span><br> ";
+		// $html = " <td><label>$etiqueta: </label> $valor </td>";
+        $html = " <td>$valor </td>";
 		return $html;
 	}
 
