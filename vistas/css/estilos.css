@@ -105,7 +105,7 @@ section{
 }
 .space_header{
     display: inline-block;
-    margin-top: 100px;
+    margin-top: 90px;
 }
 .quitar_padding{
     padding: 0px !important;
@@ -125,6 +125,13 @@ section{
     color: #3bc3f2;
     font-weight: 600;
     font-family: 'nexalight';
+}
+.seccion_gray{
+    display: inline-block;
+    position: relative;
+    background-color: #eaeaea50;
+    width: 100%;
+
 }
 
 /*________________________________________

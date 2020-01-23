@@ -13,30 +13,52 @@
     padding: 10px;
 }
 .opciones_sucursales{
-    display: inline-block;
+    
     width: 100%;
     text-align: center;
 }
 .opciones_sucursales ul li{
     list-style: none;
-    display: inline;
+    display: inline-flex;
+    position: relative;
+     
 
 }
+.redes_sucursales a{
+text-align: center;
+
+}
+.redes_sucursales a i{
+
+  color:#a8d162;
+  font-size: 1.75em;
+  text-align: center;
+ 
+}
+.redes_sucursales hr{
+  margin-top: .5rem !important;
+  margin-bottom: .5rem !important;
+
+}
+
 .opciones_sucursales a{
     text-decoration:none;
     padding:10px;
-    margin: 4px 10px ;
+    margin: 0px 10px ;
     background-color: #eaeaea50;
     border-radius: 0px 0px 10px 10px;
     font-size: 18px;
-    
     box-shadow: 2px 2px 4px #eaeaea;
     color: rgb(37, 37, 37);
+    display: inline-block;
+    top: 0;   
 }
-.redes_sucursales img{
-    height: 30px;
-    padding: 5px 1px;
-    /* width: 30px; */
+.direccion i{
+  font-size: 1.8em;
+  margin: 0px 5px;
+}
+.direccion .col-sm{
+   text-align:  center;
     
 }
 .redes_sucursales a{

@@ -1,20 +1,22 @@
-<div class="container">
-   
-     <div class="line"></div>    
-    <div class="row space_header">
 
-        <div class="col-sm subtitulo">
-            <span class="txt_verde">SE </span> 
-            <span class="txt_azul">DUEÑO DE UN </span> 
-            <span class="txt_verde"> SPA </span>
-             <br>
-        <p class="txt_italica">
-           *No lo pienses más
-        </p>
-        </div>
-       
+
+<div class="seccion_gray space_header">
+<div class="line"></div>    
+    <div class="col-sm subtitulo">
+        <span class="txt_verde">SE </span> 
+        <span class="txt_azul">DUEÑO DE UN </span> 
+        <span class="txt_verde"> SPA </span>
+         <br>
+    <p class="txt_italica">
+       *No lo pienses más
+    </p>
+</div>
+   
 
     </div>  
+<div class="container">
+   
+    
     <div class="line"></div>    
 
     <div class="row">
@@ -29,56 +31,66 @@
             <h3 class="txt_verde">Garantías</h3> 
         
             <ul>
-                <li><i class="fa fa-trophy" aria-hidden="true"></i>
-                <p>Más de <span>10 años</span> de experiencia en el sector SPA</p>
+                <li>
+                    <i class="fa fa-trophy" aria-hidden="true"></i>
+                    <p>Más de <span>10 años</span> de experiencia en el sector SPA</p>
                 </li>
-                <li><i class="fa fa-line-chart" aria-hidden="true"></i>
-                <p>Rendimientos anuales a <span>doble dígito</span></p>
-            </li>
-                <li><i class="fa fa-usd" aria-hidden="true"></i>
-                <p>Genere <span>ingresos estratégicos</span> sin estar presente</p>
-            </li>
-                <li><i class="fa fa-file-text-o" aria-hidden="true"></i>
-                <p>Nuestro modelo otorga un<span> contrato</span> para cada inversionista</p>
-            </li>
-                <li><i class="fa fa-money" aria-hidden="true"></i>
-                <p>Pool de inversión desde <span>100,000 MXN</span></p>
-            </li>
-                <li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-                <p>Asegura el buen manejo y <span>óptimo desempeño</span></p>
-            </li>
-
-                
+                <li>
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <p>Rendimientos anuales a <span>doble dígito</span></p>
+                </li>
+                <li>
+                    <i class="fa fa-usd" aria-hidden="true"></i>
+                    <p>Genere <span>ingresos estratégicos</span> sin estar presente</p>
+                </li>
+                <li>
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                    <p>Nuestro modelo otorga un<span> contrato</span> para cada inversionista</p>
+                </li>
+                <li>
+                    <i class="fa fa-money" aria-hidden="true"></i>
+                    <p>Pool de inversión desde <span>100,000 MXN</span></p>
+                </li>
+                <li>
+                    <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                    <p>Asegura el buen manejo y <span>óptimo desempeño</span></p>
+                </li>               
             </ul>
 
         </div>
 
     </div>
-    <div class="line"></div>    
+    <div class="line"></div> 
+    <hr>   
     <div class="row">
+
         <div class="col-sm caracteristicas_inversionistas">
 
-            <h3  class="txt_azul">Características para apertura del SPA</h3>
+            <h3  class="txt_azul">Características para <br>apertura del SPA</h3>
 
             <ul>
-                <li><p>Local o propiedad desde 60 metros
-               </p><i class="fa fa-home" aria-hidden="true"></i>
+                <li>
+                    <p>Local o propiedad desde 60 metros</p>
+                    <i class="fa fa-home" aria-hidden="true"></i>
                 </li>
-                <li><p>Ubicación en zonas comerciales</p>
-                <i class="fa fa-street-view" aria-hidden="true"></i>
+                <li>
+                    <p>Ubicación en zonas comerciales</p>
+                    <i class="fa fa-street-view" aria-hidden="true"></i>
                 </li>
-                <li><p>Estacionamiento necesario mínimo 3 espacios.</p>
-                <i class="fa fa-car" aria-hidden="true"></i>
+                <li>
+                    <p>Estacionamiento necesario mínimo 3 espacios.</p>
+                    <i class="fa fa-car" aria-hidden="true"></i>
                 </li>
-                <li><p>Contrato mínimo por 5 años</p>
-                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <li>
+                    <p>Contrato mínimo por 5 años</p>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </li>
-                <li><p>Incluye derechos de marca anual</p>
-               <i class="fa fa-copyright" aria-hidden="true"></i>
-                </li>
-
-                
+                <li>
+                    <p>Incluye derechos de marca anual</p>
+                    <i class="fa fa-copyright" aria-hidden="true"></i>
+                </li> 
             </ul>
+
         </div>
         <div class="col-sm formulario">
              <h3  class="txt_verde">¿Tienes dudas?</h3>

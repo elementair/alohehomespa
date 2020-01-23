@@ -1,4 +1,3 @@
-
 <!---------------------------------
 |    BANNER HOME
 ---------------------------------->
@@ -109,8 +108,8 @@
 
         <div class="row subtitulo">
             <span class="txt_verde">Consiéntete</span> 
-            <span class="txt_azul"> y Vive la experiencia </span> 
-            <span class="txt_aloe">Aloe</span>
+            <span class="txt_azul">&nbsp;y Vive la experiencia </span> 
+            <span class="txt_aloe">&nbsp;Aloe</span>
         </div>
         <div class="row">
             <div class="col-6 col-sm img-categoria" data-aos="fade-up" data-aos-duration="2000">
@@ -296,8 +295,8 @@
     <div class="container">
 
         <div class="row subtitulo">
-            <span class="txt_verde" > Conoce</span>&nbsp; 
-            <span class="txt_azul" > Nuestras Sucursales</span> 
+            <span class="txt_verde"> Conoce</span>&nbsp; 
+            <span class="txt_azul"> Nuestras Sucursales</span> 
         </div>
 
         <div class="row inicio_seccion_sucursales">
@@ -311,7 +310,8 @@
                 <li><img src="vistas/img/sucursales/5.jpg" /></li>
                 <li><img src="vistas/img/sucursales/6.jpg" /></li>
                 <li><img src="vistas/img/sucursales/7.jpg" /></li>
-                <li><img src="vistas/img/sucursales/8.jpg" /></li>                                   
+                <li><img src="vistas/img/sucursales/8.jpg" /></li>
+
             </ul>  
 
         </div>
@@ -337,7 +337,7 @@
                      <div class="line"></div>
 
                 <div class="subtitulo">
-                    <span class="txt_azul txt_sin_espacio" >Forma parte del equipo de</span>&nbsp;
+                    <span class="txt_azul txt_sin_espacio" >Forma parte del equipo de</span>
                     <span class="txt_verde txt_sin_espacio">Aloe Home Spa</span> 
                     <span class="txt_italica">¡Tenemos un plan de inversión para ti! </span>
                 </div>
@@ -360,7 +360,6 @@
          
                 <img src="vistas/img/laboral/laboral.png" alt="">
           
-
             </div>
         
         </div>
