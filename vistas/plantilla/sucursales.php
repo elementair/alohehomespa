@@ -52,16 +52,17 @@
                 <div class="row">
 
                     <!--Grid column-->
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="md-form mb-0">
                             <input type="text" id="name" name="name" class="form-control">
                             <label for="name" class=""> Tu nombre </label>
                         </div>
                     </div>
                     <!--Grid column-->
-
+                </div>
+                <div class="row">
                     <!--Grid column-->
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="md-form mb-0">
                             <input type="text" id="email" name="email" class="form-control">
                             <label for="email" class=""> Tu correo </label>

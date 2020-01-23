@@ -82,6 +82,7 @@ $ajustes=mysqli_query($link,"SELECT id, telefono_1, telefono_2, whatsapp, email_
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/mdb.lite.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/addons/datatables-select.min.css">
      <link rel="stylesheet" type="text/css" href="vistas/mdb/css/modules/animations-extended.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
            
 </head>
