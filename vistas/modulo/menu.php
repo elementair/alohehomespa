@@ -38,7 +38,6 @@
 
 </style>
 
-
  <!-- MENU RESPONSIVO MOVIL -->
     <nav class="btn-toggle">
         <div class="brand_container ">
@@ -90,12 +89,18 @@
             </div>
         </div>
         <div class="brand-datos">
-            <a data-toggle="modal" data-target="<?php echo $modal_cita; ?>"><img src="vistas/img/iconos/user.png"></a>
-            <a class="btn-green-aloe btn_agendar" data-toggle="modal" data-target="<?php echo $modal_cita; ?>">Agenda tu cita</a>
+            <a href="#"  title="<?php echo $etiqueta; ?>" data-toggle="modal" data-target="<?php echo $SesionModal; ?>"><img src="vistas/img/iconos/user.png"></a>
+
+            <a href="#"  class="btn-green-aloe btn_agendar" data-toggle="modal" data-target="<?php echo $modal_cita; ?>">Agenda tu cita</a>
+
             <a href="#" target="_blank"><img src="vistas/img/iconos/cart.png"></a>
         </div>
         <a href="#" onclick="return false" id="btn-toggle"><img src="vistas/img/menu_responsivo.png" class="btn-menu" height="25" width="30" alt=""></a>
+       
     </nav>
+
+
+
     <!-- MENU PANTALLA PC -->
     <section class="seccionToggle"> 
         <div class="wrap">

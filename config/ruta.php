@@ -1,27 +1,15 @@
 <?php
 	/* Rutas universales */
     
-    if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'
-        || $_SERVER['SERVER_PORT'] == 443) {
-
-        // HTTPS
-        $ruta_universal = "https://www.shifraspaandares.com.mx/";
-        //BD server
-        $bd_name='shifrasp_shifraspabd';
-        $bd_user='shifrasp_user';
-        $bd_pass='shifra2019*';
-
-
-    } else {
-
+  
         // HTTP
         $ruta_universal = "http://localhost/alohehomespa/";
         // BD Local
-        $bd_name='creactiv_shifra';
+        $bd_name='creactiv_alohehomespa';
         $bd_user='root';
         $bd_pass='';
  
-    }
+
 
     $ruta_universal_sistema = $ruta_universal."sistema/";
 

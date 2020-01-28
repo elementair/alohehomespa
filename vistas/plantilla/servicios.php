@@ -3,7 +3,7 @@
 	<div class="row servicios_header">
 		<div class="banner_promocion" style="background-image: url(vistas/img/servicios/banner1.jpg);">
 
-			<a class="btn_promo_agendar btn-green-aloe" href="#">Agendar</a>
+			<a class="btn_promo_agendar btn-green-aloe" data-toggle="modal" data-target="<?php echo $modal_cita; ?>">Agendar</a>
 
 		</div>
 	

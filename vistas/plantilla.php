@@ -16,9 +16,7 @@ $usuario='usuario';
 $res_nombre='';
 $res_email='';
 $res_phone='';
-
 $MJEerror='';
-
 $etiqueta="INICIAR";
 $SesionModal="#Modal_formulario_login";
 $img_inicio_ruta="img/svg/icono_ingresar.svg";
@@ -72,6 +70,7 @@ $ajustes=mysqli_query($link,"SELECT id, telefono_1, telefono_2, whatsapp, email_
     <link rel="stylesheet" type="text/css" href="vistas/css/footer.css">
     <link rel="stylesheet" href="vistas/css/buscador.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/flexisel.css">
+    <link rel="stylesheet" href="text/css" href="vistas/css/step_form_style.css">
     <link rel="stylesheet" href="vistas/aos/aos.css">
     <!-- 
         mdb
@@ -255,7 +254,11 @@ if(isset($_GET["pagina"])){
                                                 left outer join grupo_servicios as gs on 
                                                       s.grupo_servicios_id=gs.id) 
                                                 WHERE s.status=1;");
+
         }
+      include "vistas/modulo/modulo_citas.php";
+      include "vistas/modulo/modulo_login.php";
+      include "vistas/modulo/modulo_citas_lanzamiento.php";
 
     ?>
         <link rel="stylesheet" type="text/css" href="vistas/css/servicios.css">
@@ -355,6 +358,8 @@ include_once $base."modulo/footer.php";
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="vistas/js/parallax.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
 <!-- 
     mdb
@@ -364,6 +369,7 @@ include_once $base."modulo/footer.php";
 <script src="vistas/mdb/js/popper.min.js"></script>
 <script src="vistas/mdb/js/jquery.min.js"></script>
 <script src="vistas/mdb/js/modules/forms-free.min.js"></script>
+
 
 <script src="vistas/js/jquery-modal-video.min.js"></script>
     <script>
@@ -402,11 +408,13 @@ include_once $base."modulo/footer.php";
 <script src="vistas/js/jquery.scrollUp.js"></script>
 <script src="vistas/js/menu.js"></script>
 <script src="vistas/js/menu_inicio.js"></script>
+<script src="vistas/js/step_form_style.js"></script>
 
 <!-- 
     flexisel
  -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
 <script src="vistas/js/jquery.flexisel.js"></script>
 <script src="vistas/js/flexisel.js"></script>
 <script src="vistas/aos/aos.js"></script>

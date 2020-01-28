@@ -197,7 +197,7 @@
 |    CITAS  
 ---------------------------------->
 
-<section class="seccion_citas">
+<section id="seccion_citas"class="seccion_citas">
 
     <div class="container">
 
@@ -352,7 +352,7 @@
 
                 </p>
 
-                <a class="btn-green-aloe btn_laboral" href="#" target="_blank" data-aos="zoom-in" data-aos-duration="1500" >Únete a nuestro Equipo</a>
+                <a class="btn-green-aloe btn_laboral" href="index?pagina=inversionistas" data-aos="zoom-in" data-aos-duration="1500" >Únete a nuestro Equipo</a>
              
             </div>
 
