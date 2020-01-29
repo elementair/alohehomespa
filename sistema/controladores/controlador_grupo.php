@@ -15,7 +15,7 @@ class Controlador_Grupo extends Controlador_Base{
 
         $directiva = new Directivas();
         $breadcrumbs = array('alta','lista');
-        $this->breadcrumbs = $directiva->nav_breadcumbs_modifica(8, 2, $breadcrumbs);
+        $this->breadcrumbs = $directiva->nav_breadcumbs_modifica(10, 1, $breadcrumbs);
 
 
         $this->grupo_id = $_GET['grupo_id'];

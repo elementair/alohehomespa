@@ -7,7 +7,7 @@
     <input type="text" class="form-control input-md busca_elemento" placeholder="Ingresa Busqueda" value="">
 </div>
 <br>
-<div class='col-md-8 col-md-offset-2 alta'>
+<div class='col-md-10 col-md-offset-1 alta'>
     <h4><?php echo $controlador->grupo_nombre; ?></h4>
 <?php
 foreach ($controlador->menus as $menu){

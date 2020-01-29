@@ -133,7 +133,7 @@ class templates{
         $directiva = new Directivas();
         $html = $directiva->encabezado_form_alta($accion);
         $html = $html.$breadcrumbs;
-        $html = $html."<div class='col-md-8 col-md-offset-2 alta'>";
+        $html = $html."<div class='col-md-10 col-md-offset-1 alta'>";
         $html = $html.$this->genera_campos_alta($tabla,$arreglo, $link);
         $html = $html.$directiva->btn_enviar(12,'Guardar');
         $html = $html."</div></form>";
@@ -144,7 +144,7 @@ class templates{
         $directiva = new Directivas();
         $html = $directiva->encabezado_form_modifica($controlador->registro_id);
         $html = $html.$controlador->breadcrumbs;
-        $html = $html."<div class='col-md-8 col-md-offset-2 modifica'>";
+        $html = $html."<div class='col-md-10 col-md-offset-1 modifica'>";
         $html = $html.$this->genera_campos_modificables($seccion, $controlador->registro, $arreglo);
         $html = $html.$directiva->btn_enviar(12,'Modificar');
         $html = $html."</div>";
@@ -411,9 +411,11 @@ class templates{
 
     public function lista_completa($breadcrumbs, $seccion, $registros,$link){
         $directiva = new Directivas();
-        $html = $breadcrumbs;
+        
+       
+        $html = "<div class='row col-md-10 col-md-offset-1'>";
+        $html = $html.$breadcrumbs;
         $html = $html.$directiva->div_busqueda();
-        $html = $html."<div class='row col-md-12'>";
         $html = $html."<h4>".str_replace('_',' ',ucfirst($seccion))."</h4>";
         $html = $html."<table class='table table-striped'>";
         $html = $html."<thead>";
@@ -421,6 +423,7 @@ class templates{
         // $html = $html.$etiqueta;
         $html = $html.$directiva->div_encabezado_registro_lista_head($seccion."_id");
         $html = $html." </thead>";
+        
         $html = $html."<tbody id='contenido_lista'>";
         $html = $html.$this->lista($registros,$seccion,$link);
         $html = $html."</tbody></table></div>";

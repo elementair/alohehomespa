@@ -1221,15 +1221,6 @@ public function upload_file($cols=12, $campo=false, $ln=false){
     		}
 		return $html;
 
-        // <li>
-        //   <a href='#' class='dropdown-toggle' data-toggle='dropdown'>
-        //     ".ucfirst($etiqueta_menu)."<b class='caret'></b>
-        //   </a>
-        //   <ul class='dropdown-menu evento'>
-        //     ".$submenu."
-        //   </ul>
-        // </li>
-
 	}
     public function reporte_campo(){
 

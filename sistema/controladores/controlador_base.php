@@ -180,7 +180,7 @@ class Controlador_Base{
     }
     public function alta(){
 		$breadcrumbs = array('lista');
-		$this->breadcrumbs = $this->directiva->nav_breadcumbs(8, 2, $breadcrumbs);
+		$this->breadcrumbs = $this->directiva->nav_breadcumbs(10, 1, $breadcrumbs);
 	}
 
     public function alta_bd(){
@@ -270,7 +270,7 @@ class Controlador_Base{
 
     public function modifica(){
         $breadcrumbs = array('alta','lista');
-        $this->breadcrumbs = $this->directiva->nav_breadcumbs_modifica(8, 2, $breadcrumbs);
+        $this->breadcrumbs = $this->directiva->nav_breadcumbs_modifica(10, 1, $breadcrumbs);
 
         $tabla = $_GET['seccion'];
         $this->registro_id = $_GET['registro_id'];

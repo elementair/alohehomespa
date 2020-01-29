@@ -1,32 +1,35 @@
-.servicios_header{
-	margin-top: 90px;
-	width: 100%;
-	display: inline-block;
-	position: relative;
-	height: 200px;
+.servicios_header {
+    margin-top: 90px;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    height: 200px;
     margin: 0;
     margin-top: 90px;
     padding: 0;
 }
-.banner_promocion{
-	background-size: cover;
-	background-position: top;	
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 100%;
+
+.banner_promocion {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
+
 
 /*Tarjeta Producto*/
 
-.img_producto{
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	width: 100%;
-	height: auto;
-	/* border-radius: 50%; */
+.img_producto {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    /* border-radius: 50%; */
 }
-.servicio_contenedor{
+
+.servicio_contenedor {
     padding-top: 0rem !important;
 }
 
@@ -35,20 +38,27 @@
     margin-bottom: 0rem !important;
     color: #212529;
 }
-.servicio_contenedor .table_details p{
-	margin-top: 0rem !important;
-	margin-bottom: 0rem !important;
+
+.servicio_contenedor .table_details p {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
 }
-.servicio_contenedor .table_details table.table th, table.table td {
+
+.servicio_contenedor .table_details table.table th,
+table.table td {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
+
 .servicio_contenedor .card-header {
-	background-color: rgb(149, 211, 88);
+    background-color: rgb(149, 211, 88);
     border-bottom: 1px solid rgb(149, 211, 88);
 }
-.servicio_contenedor h5{
-	color: #fff !important;
 
+.servicio_contenedor h5 {
+    color: #fff !important;
 }
 
+.card {
+    margin-bottom: 15px;
+}

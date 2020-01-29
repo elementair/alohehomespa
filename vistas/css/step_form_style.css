@@ -1,4 +1,7 @@
-
+@font-face{
+  font-family: Montserrat-Regular;
+  src: url(../fonts/Montserrat-Regular.otf);
+}
 /* Style the form */
 
 
@@ -41,7 +44,7 @@ border-radius: 4px 4px 0 0;
   width: 100%;
   border-radius: 5px;
   font-size: 15px;
- font-family: nexalight;
+ font-family: Montserrat-Regular;
   border: 1px solid #aaaaaa;
 }
 #regForm select {
@@ -49,7 +52,7 @@ border-radius: 4px 4px 0 0;
   width: 100%;
   border-radius: 5px;
   font-size: 17px;
-  font-family: nexalight;
+  font-family: Montserrat-Regular;
   border: 1px solid #aaaaaa;
 }
 

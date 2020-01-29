@@ -71,6 +71,8 @@ $ajustes=mysqli_query($link,"SELECT id, telefono_1, telefono_2, whatsapp, email_
     <link rel="stylesheet" href="vistas/css/buscador.css">
     <link rel="stylesheet" type="text/css" href="vistas/css/flexisel.css">
     <link rel="stylesheet" href="text/css" href="vistas/css/step_form_style.css">
+    <link rel="stylesheet" href="vistas/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="vistas/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="vistas/aos/aos.css">
     <!-- 
         mdb
@@ -171,7 +173,26 @@ if(isset($_GET["pagina"])){
             <link rel="stylesheet" type="text/css" href="vistas/css/sidebar.css">
             <link rel="stylesheet" href="vistas/css/servicios.css">
             <script src="vistas/js/sidebar.js"></script>
+            <script src="http://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+            <script>
+            $(document).ready(function () {
 
+                (function ($) {
+
+                    $('#filtrarBusqueda').keyup(function () {
+
+                        var rex = new RegExp($(this).val(), 'i');
+                        $('.servicio_contenedor .card').hide();
+                        $('.servicio_contenedor .card').filter(function () {
+                            return rex.test($(this).text());
+                        }).show();
+
+                    })
+
+                }(jQuery));
+
+                });
+            </script>
         <?php
         include_once $base."plantilla/servicios.php";
     }   
@@ -254,12 +275,7 @@ if(isset($_GET["pagina"])){
                                                 left outer join grupo_servicios as gs on 
                                                       s.grupo_servicios_id=gs.id) 
                                                 WHERE s.status=1;");
-
         }
-      include "vistas/modulo/modulo_citas.php";
-      include "vistas/modulo/modulo_login.php";
-      include "vistas/modulo/modulo_citas_lanzamiento.php";
-
     ?>
         <link rel="stylesheet" type="text/css" href="vistas/css/servicios.css">
         <link rel="stylesheet" type="text/css" href="vistas/css/sidebar.css">
@@ -298,7 +314,7 @@ if(isset($_GET["pagina"])){
               dots[slideIndex-1].className += " active";
               captionText.innerHTML = dots[slideIndex-1].alt;
             }
-        </script>
+        </script>      
 
     <?php
     include_once $base."plantilla/servicios_detalle.php";
@@ -349,6 +365,10 @@ if(isset($_GET["pagina"])){
     include_once $base."plantilla/inicio.php";
     
 }
+include "vistas/modulo/modulo_citas.php";
+include "vistas/modulo/modulo_login.php";
+include "vistas/modulo/modulo_citas_lanzamiento.php";
+
 include_once $base."modulo/footer.php";
 
 ?>
@@ -359,7 +379,6 @@ include_once $base."modulo/footer.php";
 <script src="vistas/js/parallax.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
 
 <!-- 
     mdb

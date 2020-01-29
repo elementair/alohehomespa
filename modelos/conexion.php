@@ -1,8 +1,4 @@
-<?php
-# FileName="Connection_php_mysql.htm"
-# Type="MYSQL"
-# HTTP="true"
-/* php 5.6*/
+<<?php
 
 $hostname = "localhost";
 $database = "creactivmedia_local";
