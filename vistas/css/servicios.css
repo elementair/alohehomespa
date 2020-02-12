@@ -62,3 +62,125 @@ table.table td {
 .card {
     margin-bottom: 15px;
 }
+
+
+/*cambio de elementos de bootstrap*/
+
+.modal-content {
+    border-radius: 0 !important;
+}
+
+#exampleModalLabel img {
+    width: 100px;
+    /*position: absolute;*/
+}
+
+.modal-header {
+    text-align: center;
+    color: #fff;
+    background: #400400;
+    font-family: Montserrat-Medium;
+}
+
+.modal-header strong {
+    font-size: 20px;
+}
+
+.btn_agenda_individual .container {
+    margin-left: 100px !important;
+    margin-top: 20px !important;
+}
+
+.form-control {
+    height: 40px;
+    font-size: 14px;
+    color: #000;
+    background: #fff;
+    border-radius: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff!important;
+    text-align: center;
+    margin: 0px 10px;
+    font-size: 15px;
+    font-family: Montserrat-Regular;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    color: #400400 !important;
+    cursor: pointer;
+    background-color: #f9f9f9 !important;
+}
+
+.icono_ajenda {
+    position: fixed;
+    display: inline-flex;
+    right: 0;
+    bottom: 80px;
+    height: 60px;
+    z-index: 6;
+    cursor: pointer;
+    border-radius: 6px;
+    background: #400400;
+    box-shadow: 2px 2px 79px #000000b8;
+    width: 60px;
+}
+
+.icono_ajenda img {
+    width: 100%;
+}
+
+.icono_ajenda h4 {
+    color: #fff;
+    font-family: Montserrat-Regular;
+    padding: 10px;
+    display: none;
+}
+
+.icono_ajenda:hover {
+    width: 250px;
+    transition: all .2s ease-in-out;
+}
+
+.icono_ajenda:hover>h4 {
+    display: block;
+}
+
+.icono_ajenda:hover>img {
+    width: 24%;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.btn:hover {
+    border-radius: 0px;
+    background: #400400;
+    color: #fff;
+    transition: all .2s ease-in-out;
+}
+
+#exampleModal .modal-body {
+    padding: 0px;
+}
+
+#exampleModal .carousel-inner {
+    height: 90vh;
+}
+
+#exampleModal .close {
+    position: absolute;
+    font-size: 60px;
+    right: 10px;
+    opacity: .8;
+    z-index: 999 !important;
+    margin: 10px;
+    background: #00000080;
+    border: 1px #fff;
+    border-radius: 50px;
+    color: #fff;
+}

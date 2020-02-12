@@ -108,7 +108,7 @@ $display = 'none';
 																<div class="panel-body desc_individual">
 																	<div class="col-md-12">
 																		<br>
-																		<p><?php echo $res['descripcion']; ?><a href="index?pagina=servicio_individual&servicio_id=<?php echo  $res['servicio_id']; ?>&grupo_servicio_servicio_id=<?php echo $res['grupo_servicio_id']; ?>" title=""> Mas detalles</a>
+																		<p><?php echo $res['descripcion']; ?><a href="index?pagina=servicio_individual&servicio_id=<?php echo  $res['servicio_id']; ?>&grupo_servicio_id=<?php echo $res['grupo_servicio_id']; ?>" title=""> Mas detalles</a>
 																		</p>
 																		<hr>
 																		<div class="col-xs-6 col-md-4">
